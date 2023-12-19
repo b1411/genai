@@ -8,9 +8,10 @@ type TRevealProps = HTMLAttributes<HTMLElement> & {
 	delay?: number;
 	el?: ElementType;
 	className?: string;
+	repeat?: number;
 };
 
-export default function Reveal({ el, children, delay, className, ...rest }: TRevealProps) {
+export default function Reveal({ el, children, delay, className, repeat, ...rest }: TRevealProps) {
 	const DynamicComponent = el ? motion(el) : motion.div;
 
 	return (
@@ -19,7 +20,7 @@ export default function Reveal({ el, children, delay, className, ...rest }: TRev
 			initial={{ opacity: 0, translateY: 20, transitionProperty: "transform opacity" }}
 			whileInView={{ opacity: 1, translateY: 0 }}
 			viewport={{ once: true }}
-			transition={{ duration: 0.5, delay: delay }}
+			transition={{ duration: 0.5, delay: delay, repeat: repeat ? repeat : 1 }}
 			className={className}
 			{...rest}
 		>
