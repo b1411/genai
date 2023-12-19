@@ -3,7 +3,7 @@ export type TBlockFeature = {
 	title: string;
 	subtitle: string;
 	description: string;
-	listItems: string[];
+	listItems?: string[];
 	image: string;
 	linkText?: string;
 	linkUrl?: string;
