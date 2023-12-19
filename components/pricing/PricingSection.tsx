@@ -10,14 +10,14 @@ export default function PricingSection() {
 					<div className="col-lg-10">
 						<div className="text-center">
 							<Reveal el="p" className="text-primary-dark" delay={0.05}>
-								Pricing Plan
+								Тарифный план 
 							</Reveal>
 							<Reveal el="h1" className="text-white mb-5" delay={0.1}>
-								Ready to Get Started? <br />
-								Don&apos;t Worry, We&apos;ll Keep You Under Budget
+							Готовы приступить к работе?? <br />
+							Не волнуйтесь, мы уложимся в Ваш бюджет
 							</Reveal>
 							<Reveal el="p" className="mb-0" delay={0.15}>
-								Get started with a 5-day trial, Cancel anytime.
+								Начни уже сегодня!
 							</Reveal>
 						</div>
 					</div>
