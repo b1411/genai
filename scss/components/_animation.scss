@@ -1,0 +1,27 @@
+// Animation
+.animate-scale {
+	animation-name: scale;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+@keyframes scale {
+	0%,
+	100% {
+		transform: scale(1);
+	}
+	25% {
+		transform: scale(0.9);
+	}
+	50% {
+		transform: scale(1.1);
+	}
+	75% {
+		transform: scale(0.9);
+	}
+}
+
+.typed-animation {
+	white-space: nowrap;
+}
