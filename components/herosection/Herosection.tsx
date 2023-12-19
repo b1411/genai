@@ -51,9 +51,9 @@ export default function Herosection() {
 								</div>
 							</Reveal>
 							<ul className="d-flex flex-wrap gap-4 gap-md-8 gap-lg-10 align-center justify-center mt-8 mb-0">
-								<li>Write Blogs 10X Faster</li>
-								<li>Write Higher Converting Posts</li>
-								<li>Write More Engaging Emails</li>
+								<li>Высокая эффективность</li>
+								<li>Непрерывная работа</li>
+								<li>Минимум ошибок</li>
 							</ul>
 							<div className="d-flex gap-8 align-center justify-center mt-12 review-badges">
 								<Image src={reviewIcon1} alt="icon" className="img-fluid" />
