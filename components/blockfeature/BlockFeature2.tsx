@@ -33,7 +33,7 @@ export default function BlockFeature2({ index, data, reversed = false }: TBlockF
 						<h1 className="text-white mb-8">{title}</h1>
 						<p className="mb-6">{description}</p>
 						<ul className="list-unstyled list-check mb-8">
-							{listItems.map((item, index) => (
+							{listItems?.map((item, index) => (
 								<li key={index}>
 									<i className="ti ti-check fs-5"></i>
 									<span>{item}</span>
