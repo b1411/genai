@@ -6,6 +6,7 @@ import "swiper/css/pagination";
 // vs-code-organize-imports-disable-next-line
 import "@/scss/style.scss";
 import Link from "next/link";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata: Metadata = {
 	title: {
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: TRootLayoutProps) {
 						Light Version
 					</Link>
 				) : null}
+			<SpeedInsights />
 			</body>
 		</html>
 	);
