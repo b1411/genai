@@ -24,12 +24,12 @@ export default function Herosection() {
 									AI Интегратор
 								</Reveal>
 								<Reveal el="h1" className="text-white mb-8" delay={0.15}>
-									A 10X Faster Way To Write Your <br />
+									TANIR TECH это про <br />
 									<TypedText />
 								</Reveal>
 								<Reveal delay={0.3}>
-									<Link href="/login" className="btn btn-lg btn-gradient-1">
-										Start Writing - It&apos;s Free
+									<Link href="/contact" className="btn btn-lg btn-gradient-1">
+										Обратиться к нам
 									</Link>
 								</Reveal>
 							</div>
