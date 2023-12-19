@@ -10,8 +10,8 @@ export default function FaqSection() {
 					<div className="col-lg-10">
 						<div className="text-center">
 							<Reveal el="h1" className="text-white mb-0" delay={0.05}>
-								Questions About our GenAI? <br className="d-none d-md-block" />
-								We have Answers!
+								Остались вопросы? <br className="d-none d-md-block" />
+								у нас есть ответы!
 							</Reveal>
 						</div>
 					</div>
