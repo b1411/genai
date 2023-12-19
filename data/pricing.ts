@@ -51,7 +51,7 @@ export const dataPricing: TPricing[] = [
             "втоматизация повседневных задач",
             "Поддержка мультиязычности",
         ],
-        isPopular: true,
+        isPopular: false,
         type: "monthly",
     },
 ]
