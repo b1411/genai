@@ -19,7 +19,7 @@ export default function CtaHome() {
 									Используя <span className="text-primary-dark">GenAI</span> вы можете
 									сохранить время и деньги						</h2>
 								<Link href="/login" className="btn btn-primary-dark">
-									Get Started Free
+									связаться с нами
 								</Link>
 								<div className="cta-image-container mt-10">
 									<svg
