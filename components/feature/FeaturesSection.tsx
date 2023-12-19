@@ -9,8 +9,7 @@ export default function FeaturesSection() {
 			<div className="container">
 				<div className="text-center mb-18">
 					<Reveal el="h1" className="mb-0 text-white" delay={0.05}>
-						Generate Creative AI Copy On-The-Spot, <br className="d-none d-lg-block" />
-						Across Your Favorite Tools
+						Искусственный Интеллект в Действии
 					</Reveal>
 				</div>
 
@@ -23,8 +22,8 @@ export default function FeaturesSection() {
 				</div>
 
 				<div className="text-center mt-12">
-					<Link href="/login" className="btn btn-primary-dark">
-						Try a demo
+					<Link href="/contact" className="btn btn-primary-dark">
+						Попробовать AI-Сотрудников
 					</Link>
 				</div>
 			</div>
