@@ -13,7 +13,7 @@ export default function PricingSection() {
 								Тарифный план 
 							</Reveal>
 							<Reveal el="h1" className="text-white mb-5" delay={0.1}>
-							Готовы приступить к работе?? <br />
+							Готовы приступить к работе? <br />
 							Не волнуйтесь, мы уложимся в Ваш бюджет
 							</Reveal>
 							<Reveal el="p" className="mb-0" delay={0.15}>
