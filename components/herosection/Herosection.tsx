@@ -21,7 +21,7 @@ export default function Herosection() {
 						<div className="text-center">
 							<div className="position-relative z-1">
 								<Reveal el="p" className="text-primary-dark">
-									Best AI Copywriting Tool
+									AI Интегратор
 								</Reveal>
 								<Reveal el="h1" className="text-white mb-8" delay={0.15}>
 									A 10X Faster Way To Write Your <br />
