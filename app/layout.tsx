@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 		template: "%s | TANIR - лучший сервис для автоматизации продаж",
 		default: "TANIR - лучший сервис для автоматизации продаж",
 	},
-	description: "AI Based Copywriting and Content Writing Nextjs Landing Page Template",
+	description: "Интеграция AI-сотрудников для оптимизации бизнес-процессов. Максимальная эффективность и инновационные решения от TANYR Technology. Улучшите работу вашей компании с нами!",
 };
 
 type TRootLayoutProps = {
