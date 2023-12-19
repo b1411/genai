@@ -1,10 +1,10 @@
 ---
-title: "SEO Content"
-description: "Writing blog content with GenAI, make sure you have a clear understanding of who your audience is."
-icon: "seo"
+title: "Энергетическая эффективность"
+description: "Оптимизируйте потребление энергии и улучшайте эффективность с нашими ИИ-решениями. Экологичное будущее уже здесь!"
+icon: "lightbulb"
 ---
 
-# SEO Content
+# Product Description.
 
 The inability to write. Everyone has been there. Even the most seasoned and well-versed writers and content producers endure mental gaps. Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum.
 

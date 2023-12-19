@@ -1,10 +1,10 @@
 ---
-title: "Landing Page Copy"
-description: "First know who you're targeting. Identify your target audience and understand their needs."
-icon: "list-details"
+title: "Автоматизация финансовой отчетности"
+description: "Ускорьте процессы финансовой отчетности с нашими ИИ-сотрудниками. Точность и скорость в одном пакете!"
+icon: "chart-bar"
 ---
 
-# Landing Page Copy.
+# Marketing Copy.
 
 The inability to write. Everyone has been there. Even the most seasoned and well-versed writers and content producers endure mental gaps. Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum.
 

@@ -1,3 +1,5 @@
+import {IconName} from "@fortawesome/free-regular-svg-icons";
+
 export type TUseCaseVariants = "left-styled" | "center-styled" | "none";
 
 export type TUsecaseMetadata = {

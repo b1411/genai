@@ -1,10 +1,10 @@
 ---
-title: "Writing Blog Content"
-description: "Writing blog content with GenAI, make sure you have a clear understanding of who your audience is."
-icon: "brand-blogger"
+title: "Анализ данных для маркетинга"
+description: "Получите ценные инсайты из текстов и данных с помощью ИИ-анализа. Максимизируйте свою маркетинговую стратегию!"
+icon: "chart-line"
 ---
 
-# Writing Blog Content.
+# eCommerce Copy.
 
 The inability to write. Everyone has been there. Even the most seasoned and well-versed writers and content producers endure mental gaps. Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum.
 

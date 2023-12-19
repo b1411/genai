@@ -1,10 +1,10 @@
 ---
-title: "Product Description"
-description: "Optimize you content for the first know who you're targeting. Identify your target audience."
-icon: "stack-2"
+title: "Исследование данных в научных исследованиях"
+description: "Автоматизируйте сбор и анализ данных для научных исследований с помощью ИИ. Новые открытия ждут вас!"
+icon: "flask"
 ---
 
-# Product Description.
+# SEO Content
 
 The inability to write. Everyone has been there. Even the most seasoned and well-versed writers and content producers endure mental gaps. Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum.
 

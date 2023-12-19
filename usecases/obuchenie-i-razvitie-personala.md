@@ -1,7 +1,7 @@
 ---
-title: "Email Marketing"
-description: "Writing blog content with GenAI, make sure you have a clear understanding of who your audience is."
-icon: "mail"
+title: "Обучение и развитие персонала"
+description: "Создайте персонализированные образовательные курсы с нашими ИИ-обучателями. Поднимите квалификацию вашего персонала!"
+icon: "graduation-cap"
 ---
 
 # Email Marketing

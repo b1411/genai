@@ -1,10 +1,10 @@
 ---
-title: "Marketing Copy"
-description: "A Magical Tool to Optimize you content for the first know who you're targeting. Identify your target."
-icon: "chart-histogram"
+title: "Обслуживание клиентов"
+description: "Улучшите опыт клиентов с нашими ИИ-чатботами, доступными 24/7. Свяжитесь с нами для узнаваемой помощи!"
+icon: "headset"
 ---
 
-# Marketing Copy.
+# Digital Ad Copy.
 
 The inability to write. Everyone has been there. Even the most seasoned and well-versed writers and content producers endure mental gaps. Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum.
 
@@ -24,7 +24,7 @@ Everyone has been there. Even the most seasoned and well-versed writers and cont
 
 ![](/images/screens/screen-1.jpg)
 
-#### Step 2: Start creating powerful content, for blog post
+#### Step 3: Start creating powerful content, for blog post
 
 Everyone has been there. Even the most seasoned and well-versed writers and content producers endure mental gaps. Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate anyone exercitation incididunt aliquip deserunt reprehenderit elit laborum.
 

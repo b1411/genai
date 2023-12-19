@@ -1,10 +1,10 @@
 ---
-title: "Digital Ad Copy"
-description: "A Magical Tool to Optimize you content for the first know who you're targeting. Identify your target."
-icon: "brand-blogger"
+title: "Разработка новых продуктов"
+description: "Используйте ИИ для ускорения процессов разработки новых продуктов. Инновации, которые вы ожидали!"
+icon: "cogs"
 ---
 
-# Digital Ad Copy.
+# News Article
 
 The inability to write. Everyone has been there. Even the most seasoned and well-versed writers and content producers endure mental gaps. Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum.
 
