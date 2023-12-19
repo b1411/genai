@@ -12,7 +12,7 @@ export default function ReviewsSection() {
 					<div className="col-lg-9">
 						<div className="text-center">
 							<Reveal el="h1" className="text-white" delay={0.05}>
-								<span className="text-primary-dark">TANiR</span> получил {" "}
+								<span className="text-primary-dark">TANIR</span> получил {" "}
 								<Image placeholder="blur" src={starIcon} alt="оценку" /> 4.8/5 звезд
 								в более чем 10,000+ отзывах.
 							</Reveal>
