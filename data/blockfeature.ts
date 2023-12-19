@@ -12,7 +12,7 @@ export const dataBlockFeatures: TBlockFeature[] = [
         //     "Let's Communicate with your customers with emotions",
         //     "Use visuals like images, videos, or infographics to make your content more engaging",
         // ],
-        image: "/images/illustrations/feature-illustration-2-dark.svg",
+        image: "/images/illustrations/feature-illustration-2-dark.png",
         // linkText: "Get Started Free",
         // linkUrl: "/login",
     },
