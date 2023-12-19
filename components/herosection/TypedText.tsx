@@ -18,6 +18,7 @@ export default function TypedText() {
             strings={["инновации", "максимальную эффективность", "будущее"]}
             typeSpeed={100}
             className="fw-bold text-gradient-2 typed-animation"
+            loop
         />
     );
 }
