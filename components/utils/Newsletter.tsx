@@ -27,7 +27,7 @@ export default function Newsletter({ textButton = false }: TNewsletterProps) {
 				<input
 					type="email"
 					className="form-control"
-					placeholder="Enter your email"
+					placeholder="Введите свой email"
 					{...register("email", {
 						required: {
 							value: true,
