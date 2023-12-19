@@ -16,7 +16,7 @@ export default function CtaHome() {
 						<div className="col-lg-10">
 							<div className="text-center pt-6 px-6 pt-md-10 px-md-10 pt-lg-18 px-lg-18">
 								<h2 className="mb-6 text-white">
-									Используя <span className="text-primary-dark">GenAI</span> вы можете
+									Сотрудничая с <span className="text-primary-dark">TANIR</span> вы можете
 									сохранить время и деньги						</h2>
 								<Link href="/login" className="btn btn-primary-dark">
 									связаться с нами
