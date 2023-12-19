@@ -15,7 +15,7 @@ export default function TypedText() {
 
     return (
         <ReactTyped
-            strings={["инновации", "максимальную эффективность", "будущее"]}
+            strings={["инновации", "эффективность", "будущее"]}
             typeSpeed={100}
             className="fw-bold text-gradient-2 typed-animation"
             loop
