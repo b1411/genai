@@ -1,94 +1,84 @@
-import { TReview } from "@/types/review";
+import {TReview} from "@/types/review";
 
 export const dataReviews: TReview[] = [
     {
-        id: 1,
-        name: "Wade Warrent",
-        designation: "Marketing Coordinator",
-        image: "/images/review/1.png",
-        rating: 4,
-        message:
-            "This is the best thing that has happened to my team in a while! Makes post text something we barely need to think about!",
+        "id": 1,
+        "name": "Айдан Алимбаева",
+        "designation": "Управляющий проектами",
+        "image": "/images/review/1.png",
+        "rating": 5,
+        "message": "У нас в TANIR TECHNOLOGY появился новый сотрудник - искусственный интеллект. Он помогает нам управлять проектами и оптимизировать рабочий процесс. Это как магия! Спасибо, что сделали нашу жизнь проще."
     },
     {
-        id: 2,
-        name: "Dianne Russell",
-        designation: "Content Creator",
-        image: "/images/review/2.png",
-        rating: 5,
-        message:
-            "Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim.",
+        "id": 2,
+        "name": "Аскар Баймуратов",
+        "designation": "Руководитель аналитического отдела",
+        "image": "/images/review/2.png",
+        "rating": 5,
+        "message": "AI внес мощный вклад в нашу компанию. Теперь мы можем анализировать большие объемы данных и принимать стратегические решения быстрее. Это как турбо-ускорение для бизнеса!"
     },
     {
-        id: 3,
-        name: "Jenny Wilson",
-        designation: "Product Designer",
-        image: "/images/review/3.png",
-        rating: 3,
-        message:
-            "Comfortable to wear for long periods of time. The battery life is impressive, providing up to 8 hours of listening time on a single charge. The earbuds are also sweat.",
+        "id": 3,
+        "name": "Динара Тулепбергенова",
+        "designation": "Операционный директор",
+        "image": "/images/review/3.png",
+        "rating": 5,
+        "message": "С AI от TANIR TECHNOLOGY мы стали более конкурентоспособными. Он автоматизирует рутинные задачи, позволяя нам сосредотачиваться на более важных аспектах бизнеса."
     },
     {
-        id: 4,
-        name: "Guy Hawkins",
-        designation: "Digital Marketer",
-        image: "/images/review/4.png",
-        rating: 4,
-        message:
-            "Through my interactions with users, I have seen how technology has made life easier and more convenient for people.",
+        "id": 4,
+        "name": "Нурлан Амиров",
+        "designation": "Менеджер по клиентским отношениям",
+        "image": "/images/review/4.png",
+        "rating": 5,
+        "message": "Искусственный интеллект внедрен в нашей компании, и это был настоящий прорыв. Он помог нам создать персонализированные рекомендации для клиентов, увеличивая нашу клиентскую базу."
     },
     {
-        id: 5,
-        name: "Bessie Cooper",
-        designation: "SEO Expert",
-        image: "/images/review/1.png",
-        rating: 5,
-        message:
-            "I feel proud to be part of this technological advancement and to be able to help people in their day- to - day activities. It is truly amazing how technology has the power to connect",
+        "id": 5,
+        "name": "Айнур Кенжебаева",
+        "designation": "Стратегический аналитик",
+        "image": "/images/review/5.png",
+        "rating": 5,
+        "message": "AI от TANIR TECHNOLOGY стал нашим надежным партнером. Он анализирует рынок и помогает нам выявлять новые возможности для развития бизнеса."
     },
     {
-        id: 6,
-        name: "Wade Warrent",
-        designation: "Marketing Coordinator",
-        image: "/images/review/2.png",
-        rating: 5,
-        message:
-            "This is the best thing that has happened to my team in a while! Makes post text something we barely need to think about!",
+        "id": 6,
+        "name": "Еркежан Исабаев",
+        "designation": "Директор по стратегии",
+        "image": "/images/review/1.png",
+        "rating": 5,
+        "message": "Благодаря искусственному интеллекту, наша компания стала более адаптивной к изменениям рынка. Теперь мы всегда впереди конкурентов!"
     },
     {
-        id: 7,
-        name: "Dianne Russell",
-        designation: "Content Creator",
-        image: "/images/review/3.png",
-        rating: 3,
-        message:
-            "Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim.",
+        "id": 7,
+        "name": "Гульмира Сагадиева",
+        "designation": "Финансовый директор",
+        "image": "/images/review/2.png",
+        "rating": 5,
+        "message": "AI от TANIR TECHNOLOGY - настоящий гений! Он помогает нам сократить издержки и повысить эффективность нашего бизнеса. С ним мы никогда не прогадали."
     },
     {
-        id: 8,
-        name: "Jenny Wilson",
-        designation: "Product Designer",
-        image: "/images/review/4.png",
-        rating: 5,
-        message:
-            "Comfortable to wear for long periods of time. The battery life is impressive, providing up to 8 hours of listening time on a single charge. The earbuds are also sweat.",
+        "id": 8,
+        "name": "Амангельды Абдрахманов",
+        "designation": "Менеджер по обслуживанию клиентов",
+        "image": "/images/review/3.png",
+        "rating": 5,
+        "message": "С AI в TANIR TECHNOLOGY мы смогли автоматизировать обработку клиентских запросов, что существенно улучшило наш сервис. Спасибо за этот инновационный шаг!"
     },
     {
-        id: 9,
-        name: "Guy Hawkins",
-        designation: "Digital Marketer",
-        image: "/images/review/1.png",
-        rating: 5,
-        message:
-            "Through my interactions with users, I have seen how technology has made life easier and more convenient for people.",
+        "id": 9,
+        "name": "Айзер Ахметов",
+        "designation": "Заведующий складом",
+        "image": "/images/review/4.png",
+        "rating": 5,
+        "message": "Искусственный интеллект от TANIR TECHNOLOGY - наш надежный соратник в борьбе за рыночное лидерство. Он помогает нам прогнозировать спрос и управлять запасами."
     },
     {
-        id: 10,
-        name: "Bessie Cooper",
-        designation: "SEO Expert",
-        image: "/images/review/2.png",
-        rating: 4,
-        message:
-            "I feel proud to be part of this technological advancement and to be able to help people in their day- to - day activities. It is truly amazing how technology has the power to connect",
+        "id": 10,
+        "name": "Жанар Сулейменова",
+        "designation": "Директор по инновациям",
+        "image": "/images/review/5.png",
+        "rating": 5,
+        "message": "AI в TANIR TECHNOLOGY - это не просто технология, это наша тайная военная стратегия! С его помощью мы анализируем конкурентов и разрабатываем инновационные решения. Наши конкуренты просто завидуют нам!"
     }
 ]
