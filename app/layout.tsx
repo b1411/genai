@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 // vs-code-organize-imports-disable-next-line
 import "@/scss/style.scss";
+import "@/css/main.css";
 import Link from "next/link";
 import {SpeedInsights} from '@vercel/speed-insights/next';
 

@@ -165,7 +165,6 @@ export default function Header() {
 			<div className="container">
 				<Link href="/" className="navbar-brand">
 					<Image
-						placeholder="blur"
 						src={headerBlueLogo}
 						alt="GenAi"
 						height={42}
