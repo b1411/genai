@@ -31,11 +31,10 @@ export default function UseCases() {
 						<div className="col-lg-9">
 							<div className="text-center">
 								<Reveal el="p" delay={0.05} className="text-primary-dark">
-									GenAI Use Cases
+								Примеры применения
 								</Reveal>
 								<Reveal el="h1" className="text-white mb-0" delay={0.1}>
-									Write Better Content Faster, The Future Of AI Writing Tools is
-									Here
+								Узнайте, как наши AI-решения могут улучшить ваш бизнес
 								</Reveal>
 							</div>
 						</div>
