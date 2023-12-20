@@ -185,7 +185,7 @@ export default function Header() {
 				<div
 					className={classNames("collapse navbar-collapse", {
 						show: isMenuOpen,
-					})}
+					})}	
 				>
 					<div className="navbar-content-inner ms-lg-auto d-flex flex-column flex-lg-row align-lg-center gap-4 gap-lg-10 p-2 p-lg-0">
 						<ul className="navbar-nav gap-lg-2 gap-xl-5">

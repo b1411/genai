@@ -8,21 +8,21 @@ import TeamSection from "@/components/team/TeamSection";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "About",
+	title: "О нас",
 };
 
 export default function AboutPage() {
 	return (
 		<main className="flex-grow-1">
 			<Breadcrumb
-				title="About GenAI."
+				title="О TANIR"
 				path={[
 					{
-						text: "Home",
+						text: "Главная",
 						link: "/",
 					},
 					{
-						text: "About Us",
+						text: "О нас",
 					},
 				]}
 			/>
