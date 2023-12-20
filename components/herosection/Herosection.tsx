@@ -24,8 +24,7 @@ export default function Herosection() {
                                     AI Интегратор
                                 </Reveal>
                                 <Reveal el="h1" className="text-white mb-8" delay={0.15}>
-                                    TANIR TECH <br/>
-                                    <TypedText/>
+                                    TANIR TECH <TypedText />
                                 </Reveal>
                                 <Reveal delay={0.3}>
                                     <Link href="/contact" className="btn btn-lg btn-gradient-1">
@@ -40,8 +39,7 @@ export default function Herosection() {
                                         alt="shape"
                                         className="shape animate-scale"
                                     />
-                                    <div
-                                        className="mt-12 rounded-5 border border-primary-dark shadow-lg overflow-hidden position-relative z-1">
+                                    <div className="mt-12 rounded-5 border border-primary-dark shadow-lg overflow-hidden position-relative z-1">
                                         <Image
                                             placeholder="blur"
                                             src={heroImage}
