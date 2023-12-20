@@ -10,9 +10,9 @@ export default function BrandLogoSection2() {
 					<div className="col-lg-10">
 						<div className="text-center">
 							<Reveal el="h4" className="mb-10" delay={0.05}>
-								<span className="text-gradient-2">20,000+</span>
-								Professionals & Teams Choose
-								<span className="text-primary-dark">GenAI.</span>
+								<span className="text-gradient-2">100+</span>
+								компаний и брендов доверяют
+								<span className="text-primary-dark"> TANIR</span>
 							</Reveal>
 							<div className="row align-center justify-center row-cols-3 row-cols-md-5 g-6 g-lg-10 g-xl-20">
 								{dataBrandLogos.map((brandLogo) => (
