@@ -4,7 +4,7 @@ import Image from "next/image";
 import Reveal from "../utils/Reveal";
 import ReviewsSlider from "./ReviewsSlider";
 
-export default function ReviewsSection() {
+export default function eviewsSection() {
     return (
         <section className="overflow-hidden pt-20 pt-lg-30 pb-10 pb-lg-15">
             <div className="container">
