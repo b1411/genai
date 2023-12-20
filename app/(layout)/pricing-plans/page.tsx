@@ -12,14 +12,14 @@ export default function PricingPlans() {
 	return (
 		<main className="flex-grow-1">
 			<Breadcrumb
-				title="Pricing & Plan"
+				title="Тарифы"
 				path={[
 					{
-						text: "Home",
+						text: "Главная",
 						link: "/",
 					},
 					{
-						text: "Pricing",
+						text: "Тарифы",
 					},
 				]}
 			/>
