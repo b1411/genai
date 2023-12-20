@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/shared/Breadcrumb";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Pricing Plans",
+	title: "Тарифы",
 };
 
 export default function PricingPlans() {
