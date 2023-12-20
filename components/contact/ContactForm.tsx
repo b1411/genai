@@ -3,6 +3,7 @@
 import { SyntheticEvent } from "react";
 import { useForm } from "react-hook-form";
 import Parse from "@/utils/parse";
+import { toast } from "react-toastify";
 
 type TFormData = {
     name: string;
@@ -18,13 +19,22 @@ export default function ContactForm() {
         formState: { errors },
     } = useForm<TFormData>();
 
-    const onSubmit = (data: TFormData) => {
+    const onSubmit = async (data: TFormData) => {
         const { name, email, phone, message } = data;
         const newRequest = new Parse.Object("Requests");
         newRequest.set("name", name);
         newRequest.set("email", email);
         newRequest.set("phone", phone);
         newRequest.set("message", message);
+        try {
+            await newRequest.save();
+            toast.success(`Ваше сообщение отправлено`);
+        } catch (error: any) {
+            if (error.code === 137) {
+                toast.error(`Вы уже отправляли сообщение`);
+            }
+            toast.error(`Ошибка отправки сообщения`);
+        }
     };
 
     return (
