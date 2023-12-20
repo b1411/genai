@@ -31,11 +31,11 @@ export default function Newsletter({ textButton = false }: TNewsletterProps) {
 					{...register("email", {
 						required: {
 							value: true,
-							message: "Email is Required",
+							message: "Введите свой email",
 						},
 						pattern: {
 							value: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
-							message: "Invalid email address",
+							message: "Неправильный формат email",
 						},
 					})}
 				/>
