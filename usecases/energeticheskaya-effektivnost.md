@@ -15,18 +15,17 @@ AI ассистенты обеспечивают круглосуточную д
 
 ![](/images/screens/screen-1.jpg)
 
-#### Step 2: Start creating powerful content, for blog post
+#### Сегментация аудитории:
 
-Everyone has been there. Even the most seasoned and well-versed writers and content producers endure mental gaps. Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate anyone exercitation incididunt aliquip deserunt reprehenderit elit laborum.
-
-![](/images/screens/screen-1.jpg)
-
-#### Step 2: Start creating powerful content, for blog post
-
-Everyone has been there. Even the most seasoned and well-versed writers and content producers endure mental gaps. Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate anyone exercitation incididunt aliquip deserunt reprehenderit elit laborum.
-
-Fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt.
+AI ассистенты способны определить основные характеристики клиентов и разделить их на сегменты. Это позволяет компании лучше понимать свою аудиторию и предоставлять более точные и целенаправленные предложения каждой группе клиентов.
 
 ![](/images/screens/screen-1.jpg)
 
-GenAI has been there. Even the most seasoned and well-versed writers and content producers endure mental gaps. Nulla Lorem mollit cupidatat irure. Laborum magna.
+#### Адаптация к изменениям и предпочтениям:
+
+Путем анализа изменений в поведении клиента AI ассистенты могут предугадывать будущие предпочтения и потребности. Это позволяет компаниям быть гибкими и реагировать на эволюцию интересов клиентов, предлагая актуальные и релевантные услуги и товары.
+.
+
+![](/images/screens/screen-1.jpg)
+
+TANIR, использует данные о взаимодействии с клиентами, могут значительно улучшить и оптимизировать обслуживание, делая его более персонализированным, эффективным и удовлетворяющим потребности клиентов.
