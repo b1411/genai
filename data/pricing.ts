@@ -133,7 +133,7 @@ export const dataPricing6: TPricing[] = [
         price: 299,
         description:
             "A 10X faster way to writing your professional copy",
-        buttonText: "Choose Plan",
+        buttonText: "Выбрать",
         features: [
             "5 User seats",
             "50,000 words per month",
@@ -151,7 +151,7 @@ export const dataPricing6: TPricing[] = [
         price: 1299,
         description:
             "A 10X faster way to writing your professional copy",
-        buttonText: "Choose Plan",
+        buttonText: "Выбрать",
         features: [
             "Unlimited seats",
             "100,000 words per month",

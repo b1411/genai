@@ -1,5 +1,5 @@
 export const dataContactInfo = {
-	address: "2464 Royal Ln. Mesa, New Jersey 45463",
+	address: "Абая 8А, г.Алматы",
 	phone: ["(603) 555-0123-4422", "(600) 555-0124"],
 };
 
