@@ -11,7 +11,7 @@ export default function ContactPage() {
 	return (
 		<main className="flex-grow-1">
 			<Breadcrumb
-				title="Связатся с нами"
+				title="Связаться с нами"
 				path={[
 					{
 						text: "Главная",
