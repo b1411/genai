@@ -137,7 +137,7 @@ export default function ContactForm() {
             </div>
             <div className="">
                 <button type="submit" className="btn btn-primary-dark">
-                    Send Message
+                    Отправить
                 </button>
             </div>
         </form>
