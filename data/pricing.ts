@@ -3,164 +3,149 @@ import { TPricing } from "@/types/pricing";
 export const dataPricing: TPricing[] = [
     {
         id: 1,
-        name: "Стандарт",
-        price: 25,
-        description:
-            "Повысьте эффективность вашего бизнеса с инновационными решениями искусственного интеллекта – доверьте будущее вашего успеха нам",
+        name: "Базовый Тариф",
+        price: 0, // Замените на актуальную цену
+        description: "Идеально подходит для малого бизнеса и стартапов",
         buttonText: "Выбрать",
         features: [
-            "Автоматизация и оптимизация процессов",
-            "Аналитика и прогнозирование: ",
-            "Улучшенное взаимодействие с клиентами",
-    
-            "Инновации и конкурентоспособность",
+            "Ответы на часто задаваемые вопросы",
+            "Базовая интеграция с системами управления содержимым сайта (CMS)",
+            "Стандартные шаблоны диалогов",
+            "Базовая аналитика использования",
         ],
         isPopular: false,
-        type: "monthly",
+        type: "monthly", // Или другой соответствующий тип
     },
     {
         id: 2,
-        name: "Премиум",
-        price: 100,
-        description:
-            "Повысьте эффективность вашего бизнеса с инновационными решениями искусственного интеллекта – доверьте будущее вашего успеха нам",
+        name: "Средний Тариф",
+        price: 0, // Замените на актуальную цену
+        description: "Подходит для средних предприятий, требующих расширенной функциональности",
         buttonText: "Выбрать",
         features: [
-            "Персонализированный бизнес-партнер",
-            "Продвинутые аналитические инструменты",
-            "Расширенная аналитика и прогнозирование:",
-            "Система обучения и самоусовершенствования",
-            "Автоматизированный анализ конкурентов",
-            "Поддержка мультиязычности",
+            "Расширенные диалоговые сценарии",
+            "Улучшенная интеграция с CRM и другими бизнес-системами",
+            "Настройка под специфические бизнес-процессы",
+            "Продвинутая аналитика и отчеты",
+            "Обработка естественного языка для более сложных запросов",
         ],
         isPopular: false,
-        type: "monthly",
+        type: "monthly", // Или другой соответствующий тип
     },
     {
         id: 3,
-        name: "Корпоративный",
-        price: 119,
-        description:
-            "Повысьте эффективность вашего бизнеса с инновационными решениями искусственного интеллекта – доверьте будущее вашего успеха нам",
+        name: "Премиум Тариф",
+        price: 0, // Замените на актуальную цену
+        description: "Идеальный выбор для крупных компаний с высокими требованиями",
         buttonText: "Выбрать",
         features: [
-            "Персональный подход и адаптация под ваш бизнес",
-            "Гибкие опции интеграции",
-            "Расширенные аналитические возможности",
-            "Персонализированный ИИ под ваш бизнес",
-            "втоматизация повседневных задач",
-            "Поддержка мультиязычности",
+            "Полная настраиваемость диалогов и интерфейса",
+            "Глубокая интеграция с различными корпоративными системами и базами данных",
+            "Использование передовых технологий ИИ и машинного обучения",
+            "Расширенная аналитика, включая поведенческие инсайты и прогнозирование",
+            "Персональная поддержка и консалтинговые услуги",
         ],
         isPopular: false,
-        type: "monthly",
+        type: "monthly", // Или другой соответствующий тип
     },
-]
+];
 
 export const dataPricing6: TPricing[] = [
     {
         id: 1,
-        name: "Стандарт",
-        price: 25,
-        description:
-            "Повысьте эффективность вашего бизнеса с инновационными решениями искусственного интеллекта – доверьте будущее вашего успеха нам",
+        name: "Базовый Тариф",
+        price: 0, // Замените на актуальную цену
+        description: "Идеально подходит для малого бизнеса и стартапов",
         buttonText: "Выбрать",
         features: [
-            "Single seats",
-            "10,000 words per month",
-            "30+ AI writing tools",
-            "60+ Copywriting tools",
-            "10+ languages",
+            "Ответы на часто задаваемые вопросы",
+            "Базовая интеграция с системами управления содержимым сайта (CMS)",
+            "Стандартные шаблоны диалогов",
+            "Базовая аналитика использования",
         ],
         isPopular: false,
-        type: "monthly",
+        type: "monthly", // Или другой соответствующий тип
     },
     {
         id: 2,
-        name: "Премиум",
-        price: 100,
-        description:
-            "Повысьте эффективность вашего бизнеса с инновационными решениями искусственного интеллекта – доверьте будущее вашего успеха нам",
+        name: "Средний Тариф",
+        price: 0, // Замените на актуальную цену
+        description: "Подходит для средних предприятий, требующих расширенной функциональности",
         buttonText: "Выбрать",
         features: [
-            "5 User seats",
-            "50,000 words per month",
-            "70+ AI writing tools",
-            "100+ Copywriting tools",
-            "Blog post wizard tool",
-            "20+ languages",
+            "Расширенные диалоговые сценарии",
+            "Улучшенная интеграция с CRM и другими бизнес-системами",
+            "Настройка под специфические бизнес-процессы",
+            "Продвинутая аналитика и отчеты",
+            "Обработка естественного языка для более сложных запросов",
         ],
         isPopular: false,
-        type: "monthly",
+        type: "monthly", // Или другой соответствующий тип
     },
     {
         id: 3,
-        name: "Корпаративный",
-        price: 119,
-        description:
-            "Повысьте эффективность вашего бизнеса с инновационными решениями искусственного интеллекта – доверьте будущее вашего успеха нам",
+        name: "Премиум Тариф",
+        price: 0, // Замените на актуальную цену
+        description: "Идеальный выбор для крупных компаний с высокими требованиями",
         buttonText: "Выбрать",
         features: [
-            "Unlimited seats",
-            "100,000 words per month",
-            "100+ AI writing tools",
-            "20+ Copywriting tools",
-            "Blog post wizard tool",
-            "25+ languages",
-        ],
-        isPopular: true,
-        type: "monthly",
-    },
-    {
-        id: 4,
-        name: "Стандрт+",
-        price: 0,
-        description:
-            "A 10X faster way to writing your professional copy",
-        buttonText: "Start for Free",
-        features: [
-            "Single seats",
-            "10,000 words per month",
-            "30+ AI writing tools",
-            "60+ Copywriting tools",
-            "10+ languages",
+            "Полная настраиваемость диалогов и интерфейса",
+            "Глубокая интеграция с различными корпоративными системами и базами данных",
+            "Использование передовых технологий ИИ и машинного обучения",
+            "Расширенная аналитика, включая поведенческие инсайты и прогнозирование",
+            "Персональная поддержка и консалтинговые услуги",
         ],
         isPopular: false,
-        type: "yearly",
+        type: "monthly", // Или другой соответствующий тип
     },
-    {
-        id: 5,
-        name: "Премиум+",
-        price: 299,
-        description:
-            "A 10X faster way to writing your professional copy",
-        buttonText: "Выбрать",
-        features: [
-            "5 User seats",
-            "50,000 words per month",
-            "70+ AI writing tools",
-            "100+ Copywriting tools",
-            "Blog post wizard tool",
-            "20+ languages",
-        ],
-        isPopular: false,
-        type: "yearly",
-    },
-    {
-        id: 6,
-        name: "Корпаротивный+",
-        price: 1299,
-        description:
-            "A 10X faster way to writing your professional copy",
-        buttonText: "Выбрать",
-        features: [
-            "Unlimited seats",
-            "100,000 words per month",
-            "100+ AI writing tools",
-            "20+ Copywriting tools",
-            "Blog post wizard tool",
-            "25+ languages",
-        ],
-        isPopular: true,
-        type: "yearly",
-    }
-]
+    // {
+    //     id: 4,
+    //     name: "Стандрт+",
+    //     price: 0,
+    //     description: "A 10X faster way to writing your professional copy",
+    //     buttonText: "Start for Free",
+    //     features: [
+    //         "Single seats",
+    //         "10,000 words per month",
+    //         "30+ AI writing tools",
+    //         "60+ Copywriting tools",
+    //         "10+ languages",
+    //     ],
+    //     isPopular: false,
+    //     type: "yearly",
+    // },
+    // {
+    //     id: 5,
+    //     name: "Премиум+",
+    //     price: 299,
+    //     description: "A 10X faster way to writing your professional copy",
+    //     buttonText: "Выбрать",
+    //     features: [
+    //         "5 User seats",
+    //         "50,000 words per month",
+    //         "70+ AI writing tools",
+    //         "100+ Copywriting tools",
+    //         "Blog post wizard tool",
+    //         "20+ languages",
+    //     ],
+    //     isPopular: false,
+    //     type: "yearly",
+    // },
+    // {
+    //     id: 6,
+    //     name: "Корпаротивный+",
+    //     price: 1299,
+    //     description: "A 10X faster way to writing your professional copy",
+    //     buttonText: "Выбрать",
+    //     features: [
+    //         "Unlimited seats",
+    //         "100,000 words per month",
+    //         "100+ AI writing tools",
+    //         "20+ Copywriting tools",
+    //         "Blog post wizard tool",
+    //         "25+ languages",
+    //     ],
+    //     isPopular: true,
+    //     type: "yearly",
+    // },
+];
