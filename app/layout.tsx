@@ -8,6 +8,7 @@ import "@/scss/style.scss";
 import "@/css/main.css";
 import Link from "next/link";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { GoogleAnalytics } from "@/utils/gtag";
 
 export const metadata: Metadata = {
     title: {
@@ -27,6 +28,7 @@ export default function RootLayout({ children }: TRootLayoutProps) {
         <html lang="ru" data-bs-theme="dark">
             <head>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <GoogleAnalytics />
             </head>
             <body>
                 <RootClientLayout>
