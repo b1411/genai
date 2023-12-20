@@ -3,7 +3,7 @@ import { TPricing } from "@/types/pricing";
 export const dataPricing: TPricing[] = [
     {
         id: 1,
-        name: "Базовый Тариф",
+        name: "Базовый",
         price: 0, // Замените на актуальную цену
         description: "Идеально подходит для малого бизнеса и стартапов",
         buttonText: "Выбрать",
@@ -18,7 +18,7 @@ export const dataPricing: TPricing[] = [
     },
     {
         id: 2,
-        name: "Средний Тариф",
+        name: "Средний",
         price: 0, // Замените на актуальную цену
         description: "Подходит для средних предприятий, требующих расширенной функциональности",
         buttonText: "Выбрать",
@@ -34,7 +34,7 @@ export const dataPricing: TPricing[] = [
     },
     {
         id: 3,
-        name: "Премиум Тариф",
+        name: "Премиум",
         price: 0, // Замените на актуальную цену
         description: "Идеальный выбор для крупных компаний с высокими требованиями",
         buttonText: "Выбрать",
@@ -53,7 +53,7 @@ export const dataPricing: TPricing[] = [
 export const dataPricing6: TPricing[] = [
     {
         id: 1,
-        name: "Базовый Тариф",
+        name: "Базовый",
         price: 0, // Замените на актуальную цену
         description: "Идеально подходит для малого бизнеса и стартапов",
         buttonText: "Выбрать",
@@ -68,7 +68,7 @@ export const dataPricing6: TPricing[] = [
     },
     {
         id: 2,
-        name: "Средний Тариф",
+        name: "Средний",
         price: 0, // Замените на актуальную цену
         description: "Подходит для средних предприятий, требующих расширенной функциональности",
         buttonText: "Выбрать",
@@ -84,7 +84,7 @@ export const dataPricing6: TPricing[] = [
     },
     {
         id: 3,
-        name: "Премиум Тариф",
+        name: "Премиум",
         price: 0, // Замените на актуальную цену
         description: "Идеальный выбор для крупных компаний с высокими требованиями",
         buttonText: "Выбрать",
