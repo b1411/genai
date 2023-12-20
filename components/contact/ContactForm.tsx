@@ -28,7 +28,7 @@ export default function ContactForm() {
         newRequest.set("message", message);
 		try {
 			await newRequest.save();
-			toast.success(`Successfully send request!`);
+			toast.success(`Ваше сообщение отправлено`);
 		}
 		catch (error) {
 			toast.error("Что-то пошло не так");
