@@ -39,10 +39,10 @@ export default function AboutSection() {
                     </Reveal>
                 </div>
                 <hr className="border-top border-lite-blue-4 opacity-100" />
-                <div className="d-flex gap-8 align-center justify-center mt-12 review-badges">
+                {/* <div className="d-flex gap-8 align-center justify-center mt-12 review-badges">
                     <Image src={reviewIcon1} alt="icon" className="img-fluid" />
                     <Image src={reviewIcon2} alt="icon" className="img-fluid" />
-                </div>
+                </div> */}
             </div>
         </section>
     );
