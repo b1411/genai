@@ -32,8 +32,9 @@ export default function ContactForm() {
         } catch (error: any) {
             if (error.code === 137) {
                 toast.error(`Вы уже отправляли сообщение`);
+            } else {
+                toast.error(`Ошибка отправки сообщения`);
             }
-            toast.error(`Ошибка отправки сообщения`);
         }
     };
 
