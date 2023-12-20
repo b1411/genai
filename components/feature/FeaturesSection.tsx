@@ -5,7 +5,7 @@ import Feature from "./Feature";
 
 export default function FeaturesSection() {
 	return (
-		<section className="py-10 py-lg-15">
+		<section className="pb-10 pb-lg-15">
 			<div className="container">
 				<div className="text-center mb-18">
 					<Reveal el="h1" className="mb-0 text-white" delay={0.05}>
