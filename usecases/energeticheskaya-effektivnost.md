@@ -1,20 +1,17 @@
 ---
-title: "Энергетическая эффективность"
-description: "Оптимизируйте потребление энергии и улучшайте эффективность с нашими ИИ-решениями. Экологичное будущее уже здесь!"
+title: "Клиентский сервис"
+description: " ИИ-ассистент поможет обрабатывать запросы клиентов через чаты , отвечать на часто задаваемые вопросы и направлять клиентов к нужным ресурсам."
 icon: "lightbulb"
 ---
 
-# Product Description.
+# Преобразование клиентского сервиса с помощью TANIR.
 
-The inability to write. Everyone has been there. Even the most seasoned and well-versed writers and content producers endure mental gaps. Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum.
+AI ассистент анализируют данные клиентов, учитывая их историю взаимодействия с компанией. Это позволяет предоставлять персонализированные рекомендации, решения и услуги, соответствующие уникальным потребностям каждого клиента. Такой подход существенно повышает уровень удовлетворенности клиентов.
 
-Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt.
 
-#### Step 1: Write Higher Converting Posts
+#### Обеспечение непрерывной связи:
 
-Everyone has been there. Even the most seasoned and well-versed writers and content producers endure mental gaps. Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate anyone exercitation incididunt aliquip deserunt reprehenderit elit laborum.
-
-Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt.
+AI ассистенты обеспечивают круглосуточную доступность для клиентов, обрабатывая их запросы в режиме реального времени. Это создает ощущение постоянной доступности и внимания к клиенту, даже вне рабочего времени компании.
 
 ![](/images/screens/screen-1.jpg)
 
