@@ -1,9 +1,8 @@
-import {TUseCaseVariants, TUsecaseMetadata} from "@/types/usecase";
+import { TUseCaseVariants, TUsecaseMetadata } from "@/types/usecase";
 import classNames from "classnames";
 import Link from "next/link";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-    faBriefcase,
     faHeadset,
     faChartLine,
     faGraduationCap,
@@ -11,27 +10,27 @@ import {
     faChartBar,
     faCogs,
     faLightbulb,
-    faFlask, IconDefinition
+    faFlask,
 } from "@fortawesome/free-solid-svg-icons";
 
 type TUsecaseProps = {
     data: TUsecaseMetadata;
     variant?: TUseCaseVariants;
-}
+};
 
 const icons = {
-    "headset": faHeadset,
+    headset: faHeadset,
     "chart-line": faChartLine,
     "graduation-cap": faGraduationCap,
-    "cubes": faCubes,
+    cubes: faCubes,
     "chart-bar": faChartBar,
-    "cogs": faCogs,
-    "lightbulb": faLightbulb,
-    "flask": faFlask,
-}
+    cogs: faCogs,
+    lightbulb: faLightbulb,
+    flask: faFlask,
+};
 
-export default function Usecase({data, variant = "none"}: TUsecaseProps) {
-    const {title, description, icon, slug} = data;
+export default function Usecase({ data, variant = "none" }: TUsecaseProps) {
+    const { title, description, icon, slug } = data;
 
     return (
         <div
@@ -46,10 +45,13 @@ export default function Usecase({data, variant = "none"}: TUsecaseProps) {
                         "p-2 border bg-gradient-3 border-primary border-white border-opacity-10":
                             variant === "none",
                         "mx-auto": variant === "center-styled",
-                    }
+                    },
                 )}
             >
-                <FontAwesomeIcon className={classNames("p-1")} icon={icons[icon as keyof typeof icons]}/>
+                <FontAwesomeIcon
+                    className={classNames("p-1")}
+                    icon={icons[icon as keyof typeof icons]}
+                />
             </div>
             <div className="content flex-grow-1">
                 <h5 className="text-white mb-4">{title}</h5>
