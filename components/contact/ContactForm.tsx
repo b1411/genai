@@ -26,13 +26,15 @@ export default function ContactForm() {
         newRequest.set("email", email);
         newRequest.set("phone", phone);
         newRequest.set("message", message);
-		try {
-			await newRequest.save();
-			toast.success(`Ваше сообщение отправлено`);
-		}
-		catch (error) {
-			toast.error("Что-то пошло не так");
-		}
+        try {
+            await newRequest.save();
+            toast.success(`Ваше сообщение отправлено`);
+        } catch (error: any) {
+            if (error.code === 137) {
+                toast.error(`Вы уже отправляли сообщение`);
+            }
+            toast.error(`Ошибка отправки сообщения`);
+        }
     };
 
     return (
