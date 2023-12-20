@@ -1,35 +1,30 @@
 ---
-title: "Управление запасами"
-description: "Оптимизируйте уровень запасов и управляйте логистикой с ИИ. Сократите расходы и повысьте эффективность!"
+title: "Контроль качества"
+description: "Алгоритмы машинного обучения могут помочь в автоматическом контроле качества продукции, выявлении дефектов и оптимизации производственных процессов."
 icon: "cubes"
 ---
 
-# Landing Page Copy.
+# Автоматический контроль качества продукции
 
-The inability to write. Everyone has been there. Even the most seasoned and well-versed writers and content producers endure mental gaps. Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum.
+Алгоритмы машинного обучения предоставляют возможность обработки и анализа огромных объемов данных в реальном времени. Они способны обучаться на основе предыдущих данных и определять паттерны, аномалии или дефекты, которые могли бы остаться незамеченными при традиционных методах контроля.
 
-Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt.
+#### Обнаружение дефектов:
 
-#### Step 1: Write Higher Converting Posts
+Визуальное распознавание: Алгоритмы компьютерного зрения могут анализировать изображения или видео и выявлять дефекты на поверхности продукции с высокой точностью.
+Анализ данных: Алгоритмы могут анализировать данные с датчиков, измеряющих параметры продукции, и выявлять аномалии в процессах изготовления
+![](/images/screens/screen-1.jpg)
 
-Everyone has been there. Even the most seasoned and well-versed writers and content producers endure mental gaps. Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate anyone exercitation incididunt aliquip deserunt reprehenderit elit laborum.
+#### Оптимизация производства:
 
-Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt.
+Прогнозирование отказов: Алгоритмы машинного обучения могут предсказывать возможные отказы оборудования или производственные сбои, что позволяет проводить предупредительную замену или ремонт.
+Оптимизация процессов: Алгоритмы помогают оптимизировать параметры производства для улучшения качества продукции и снижения отходов.
 
 ![](/images/screens/screen-1.jpg)
 
-#### Step 2: Start creating powerful content, for blog post
+#### Обратная связь и управление качеством:
 
-Everyone has been there. Even the most seasoned and well-versed writers and content producers endure mental gaps. Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate anyone exercitation incididunt aliquip deserunt reprehenderit elit laborum.
-
-![](/images/screens/screen-1.jpg)
-
-#### Step 2: Start creating powerful content, for blog post
-
-Everyone has been there. Even the most seasoned and well-versed writers and content producers endure mental gaps. Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate anyone exercitation incididunt aliquip deserunt reprehenderit elit laborum.
-
-Fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt.
+На основе данных о качестве продукции, собранных в реальном времени, нейронные сети могут предложить коррективы в процессах производства для улучшения качества.
 
 ![](/images/screens/screen-1.jpg)
 
-GenAI has been there. Even the most seasoned and well-versed writers and content producers endure mental gaps. Nulla Lorem mollit cupidatat irure. Laborum magna.
+Алгоритмы машинного обучения имеют огромный потенциал для улучшения процессов контроля качества в производственной сфере.
