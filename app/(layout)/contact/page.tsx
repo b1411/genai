@@ -4,7 +4,7 @@ import Breadcrumb from "@/components/shared/Breadcrumb";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Contact",
+	title: "Контакты",
 };
 
 export default function ContactPage() {

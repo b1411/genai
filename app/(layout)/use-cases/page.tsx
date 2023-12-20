@@ -6,21 +6,21 @@ import Reveal from "@/components/utils/Reveal";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Usecases",
+	title: "Примеры применения",
 };
 
 export default function UseCases() {
 	return (
 		<main className="flex-grow-1">
 			<Breadcrumb
-				title="Use Cases"
+				title="Примеры применения"
 				path={[
 					{
-						text: "Home",
+						text: "Главная",
 						link: "/",
 					},
 					{
-						text: "Use Cases",
+						text: "Примеры применения",
 					},
 				]}
 			/>
