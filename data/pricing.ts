@@ -4,7 +4,7 @@ export const dataPricing: TPricing[] = [
     {
         id: 1,
         name: "Базовый",
-        price: 0, // Замените на актуальную цену
+        price: 1000, // Замените на актуальную цену
         description: "Идеально подходит для малого бизнеса и стартапов",
         buttonText: "Выбрать",
         features: [
@@ -19,7 +19,7 @@ export const dataPricing: TPricing[] = [
     {
         id: 2,
         name: "Средний",
-        price: 0, // Замените на актуальную цену
+        price: 5000, // Замените на актуальную цену
         description: "Подходит для средних предприятий, требующих расширенной функциональности",
         buttonText: "Выбрать",
         features: [
@@ -35,7 +35,7 @@ export const dataPricing: TPricing[] = [
     {
         id: 3,
         name: "Премиум",
-        price: 0, // Замените на актуальную цену
+        price: 10000, // Замените на актуальную цену
         description: "Идеальный выбор для крупных компаний с высокими требованиями",
         buttonText: "Выбрать",
         features: [
@@ -54,7 +54,7 @@ export const dataPricing6: TPricing[] = [
     {
         id: 1,
         name: "Базовый",
-        price: 0, // Замените на актуальную цену
+        price: 1000, // Замените на актуальную цену
         description: "Идеально подходит для малого бизнеса и стартапов",
         buttonText: "Выбрать",
         features: [
@@ -69,7 +69,7 @@ export const dataPricing6: TPricing[] = [
     {
         id: 2,
         name: "Средний",
-        price: 0, // Замените на актуальную цену
+        price: 5000, // Замените на актуальную цену
         description: "Подходит для средних предприятий, требующих расширенной функциональности",
         buttonText: "Выбрать",
         features: [
@@ -85,7 +85,7 @@ export const dataPricing6: TPricing[] = [
     {
         id: 3,
         name: "Премиум",
-        price: 0, // Замените на актуальную цену
+        price: 10000, // Замените на актуальную цену
         description: "Идеальный выбор для крупных компаний с высокими требованиями",
         buttonText: "Выбрать",
         features: [
