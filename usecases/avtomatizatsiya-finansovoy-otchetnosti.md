@@ -4,32 +4,30 @@ description: "Ускорьте процессы финансовой отчет�
 icon: "chart-bar"
 ---
 
-# Marketing Copy.
+# Автоматическое обновление отчетов:
 
-The inability to write. Everyone has been there. Even the most seasoned and well-versed writers and content producers endure mental gaps. Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum.
+TANIR может автоматически обновлять финансовые отчеты по мере поступления новых данных, обеспечивая актуальность информации.
 
-Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt.
+#### Улучшение прогнозирования и планирования бюджета: 
 
-#### Step 1: Write Higher Converting Posts
-
-Everyone has been there. Even the most seasoned and well-versed writers and content producers endure mental gaps. Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate anyone exercitation incididunt aliquip deserunt reprehenderit elit laborum.
-
-Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt.
+Анализ данных с помощью нашего ассистента может помочь в оптимизации процесса планирования бюджета, что позволит более точно прогнозировать доходы и расходы компании.
 
 ![](/images/screens/screen-1.jpg)
 
-#### Step 2: Start creating powerful content, for blog post
+#### Оптимизация налоговых процессов:
 
-Everyone has been there. Even the most seasoned and well-versed writers and content producers endure mental gaps. Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate anyone exercitation incididunt aliquip deserunt reprehenderit elit laborum.
-
-![](/images/screens/screen-1.jpg)
-
-#### Step 2: Start creating powerful content, for blog post
-
-Everyone has been there. Even the most seasoned and well-versed writers and content producers endure mental gaps. Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate anyone exercitation incididunt aliquip deserunt reprehenderit elit laborum.
-
-Fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt.
+TANIR  может помочь в автоматическом анализе данных и выявлении налоговых обязательств, а также предоставлять рекомендации по оптимизации налоговых стратегий и соблюдению налоговых норм.
 
 ![](/images/screens/screen-1.jpg)
 
-GenAI has been there. Even the most seasoned and well-versed writers and content producers endure mental gaps. Nulla Lorem mollit cupidatat irure. Laborum magna.
+#### Обнаружение мошенничества и аномалий: 
+
+Использование TANIR для анализа финансовых данных помогает выявлять аномалии, несоответствия и потенциальные случаи мошенничества в финансовых операциях.
+
+![](/images/screens/screen-1.jpg)
+
+Интеграция TANIR в финансовую отчетность дает больше возможностей для оптимизации процессов, улучшения аналитики и повышения эффективности управления финансами в бизнесе.
+
+
+
+

@@ -4,7 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Reveal from "../utils/Reveal";
 
-export default function CtaHome() {
+export default function 
+CtaHome() {
 	return (
 		<Reveal el="section" className="cta-section py-10 py-lg-15">
 			<div className="container">
