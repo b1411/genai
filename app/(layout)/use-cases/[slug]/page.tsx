@@ -4,6 +4,7 @@ import ReviewsSection from "@/components/reviews/ReviewsSection";
 import Breadcrumb from "@/components/shared/Breadcrumb";
 import Newsletter from "@/components/utils/Newsletter";
 import Reveal from "@/components/utils/Reveal";
+import ChatWidget from "@/components/usecase/ChatWidget";
 import chatScreenImage from "@/public/images/screens/screen-3.png";
 import { getusecaseData } from "@/utils/usecases";
 import Markdown from "markdown-to-jsx";
@@ -88,8 +89,11 @@ export default function UsecaseDetails({ params }: TBlogDetailsPageProps) {
                                     wrapper: "article",
                                     overrides: {
                                         img: {
+                                            component: Image,
                                             props: {
                                                 className: "img-fluid rounded",
+                                                width: 800,
+                                                height: 450,
                                             },
                                         },
                                     },
@@ -98,6 +102,9 @@ export default function UsecaseDetails({ params }: TBlogDetailsPageProps) {
                                 {content}
                             </Markdown>
                         </div>
+                    </div>
+                    <div>
+                        <ChatWidget />
                     </div>
                 </div>
             </section>
