@@ -20,7 +20,7 @@ export default function Pricebox({ data }: TPriceboxProps) {
         <div className="pricing-card p-6 px-lg-10 py-lg-8 rounded-4 h-full bg-darkdark">
             {isPopular && <span className="badge text-bg-primary px-4 py-2">Most Popular</span>}
             <h3 className="text-primary-dark fw-medium mb-0">{name}</h3>
-            <h1 className="display-2 fw-semibold text-white mb-0 mt-4">
+            <h3 className="fw-semibold text-white mb-0 mt-4 display-4">
                 <span
                     style={{
                         fontSize: "0.5em",
@@ -29,7 +29,7 @@ export default function Pricebox({ data }: TPriceboxProps) {
                     от{" "}
                 </span>
                 ${price}
-            </h1>
+            </h3>
             <p className="text-white lead fw-normal mt-4 mb-0">{description}</p>
             <button
                 className="pricing-btn btn btn-lg w-full fs-4 lh-sm mt-9 btn-dark-blue-3"
