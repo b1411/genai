@@ -41,7 +41,7 @@ export default function UsecaseDetails({ params }: TBlogDetailsPageProps) {
                 title={title}
                 path={[
                     {
-                        text: "Home",
+                        text: "Главная",
                         link: "/",
                     },
                     {
@@ -102,7 +102,7 @@ export default function UsecaseDetails({ params }: TBlogDetailsPageProps) {
                 </div>
             </section>
 
-            <ReviewsSection />
+            {/* <ReviewsSection /> */}
 
             <FaqSection />
 

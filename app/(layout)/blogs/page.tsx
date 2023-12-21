@@ -25,7 +25,7 @@ export default function BlogsPage({ searchParams }: TBlogPageProps) {
 				title="Blog Posts"
 				path={[
 					{
-						text: "Home",
+						text: "Главная",
 						link: "/",
 					},
 					{
