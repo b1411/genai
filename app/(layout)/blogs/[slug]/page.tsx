@@ -37,7 +37,7 @@ export default function BlogDetailsPage({ params }: TBlogDetailsPageProps) {
 				title="Post Details"
 				path={[
 					{
-						text: "Home",
+						text: "Главная",
 						link: "/",
 					},
 					{
