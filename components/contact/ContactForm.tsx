@@ -117,7 +117,7 @@ export default function ContactForm() {
             </div>
             <div className="">
                 <label htmlFor="message" className="form-label fs-lg fw-medium mb-4">
-                    Your Message*
+                    Ваше сообщение*
                 </label>
                 <textarea
                     id="message"
@@ -128,7 +128,7 @@ export default function ContactForm() {
                         },
                     })}
                     className="form-control rounded-2"
-                    placeholder="Write here your details message"
+                    placeholder="Напишите свое сообщение"
                     rows={4}
                 ></textarea>
                 {errors.message?.message && (
