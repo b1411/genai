@@ -1,7 +1,7 @@
 export default function ChatWidget() {
     return (
-        <div>
+        <div className="col-lg-8">
 
-0        </div>
+       </div>
     )
 }
