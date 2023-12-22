@@ -6,6 +6,7 @@ import Herosection from "@/components/herosection/Herosection";
 import PricingSection from "@/components/pricing/PricingSection";
 import ReviewsSection from "@/components/reviews/ReviewsSection";
 import UsecaseSection from "@/components/usecase/UsecaseSection";
+import ModalForm from "@/components/utils/ModalForm";
 import Reveal from "@/components/utils/Reveal";
 import { Metadata } from "next";
 
@@ -50,6 +51,8 @@ export default function Home() {
 			<FaqSection />
 
 			<CtaHome />
+
+			<ModalForm isOpen={true} />
 		</main>
 	);
 }

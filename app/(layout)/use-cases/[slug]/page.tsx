@@ -104,7 +104,7 @@ export default function UsecaseDetails({ params }: TBlogDetailsPageProps) {
                         </div>
                     </div>
                     <div>
-                        <ChatWidget />
+                        <ChatWidget assistantKey="" />
                     </div>
                 </div>
             </section>
