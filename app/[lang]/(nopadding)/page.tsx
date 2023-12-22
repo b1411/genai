@@ -10,12 +10,15 @@ import ModalForm from "@/components/utils/ModalForm";
 import Reveal from "@/components/utils/Reveal";
 import { Metadata } from "next";
 import { Fragment } from "react";
+import { getDictionary } from "../dictionaries";
 
 export const metadata: Metadata = {
     title: "Главная",
 };
 
-export default function Home({ params: { lang } }: { params: { lang: string } }) {
+export default async function Home({ params: { lang } }: { params: { lang: string } }) {
+    const dict = await getDictionary(lang);
+    console.log(dict);
     return (
         <Fragment>
             <main className="flex-grow-1">

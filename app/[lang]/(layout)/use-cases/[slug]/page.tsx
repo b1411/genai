@@ -10,30 +10,19 @@ import { getusecaseData } from "@/utils/usecases";
 import Markdown from "markdown-to-jsx";
 import { Metadata } from "next";
 import Image from "next/image";
+import { getDictionary } from "@/app/[lang]/dictionaries";
 
-type TBlogDetailsPageProps = {
-    params: {
-        slug: string;
-    };
-};
-
-type TGenerateMetadataProps = {
-    params: {
-        slug: string;
-    };
-};
-
-export function generateMetadata({ params }: TGenerateMetadataProps): Metadata {
+export function generateMetadata({ params }: { params: { slug: string; lang: string } }): Metadata {
     const { slug: slugFromUrl } = params;
     const { title } = getusecaseData(slugFromUrl);
-
     return {
         title: title,
     };
 }
 
-export default function UsecaseDetails({ params }: TBlogDetailsPageProps) {
+export default async function UsecaseDetails({ params }: { params: { slug: string; lang: string } }) {
     const { slug: slugFromUrl } = params;
+    const dict = await getDictionary(params.lang);
     const { title, description, slug, content } = getusecaseData(slugFromUrl);
 
     return (

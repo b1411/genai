@@ -6,12 +6,15 @@ import ReviewsSection from "@/components/reviews/ReviewsSection";
 import Breadcrumb from "@/components/shared/Breadcrumb";
 import TeamSection from "@/components/team/TeamSection";
 import { Metadata } from "next";
+import { getDictionary } from "../../dictionaries";
 
 export const metadata: Metadata = {
 	title: "О нас",
 };
 
-export default function AboutPage() {
+export default async function AboutPage({ params: { lang } }: { params: { lang: string } }) {
+	const dict = await getDictionary(lang);
+
 	return (
 		<main className="flex-grow-1">
 			<Breadcrumb
