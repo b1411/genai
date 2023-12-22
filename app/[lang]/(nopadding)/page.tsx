@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: "Главная",
 };
 
-export default function Home() {
+export default function Home({ params: { lang } }: { params: { lang: string } }) {
     return (
         <Fragment>
             <main className="flex-grow-1">
