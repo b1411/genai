@@ -38,7 +38,7 @@ export default function ContactSection() {
                 </div>
                 <Reveal className="ratio ratio-16x9 rounded-4 overflow-hidden mt-18" delay={0.15}>
                     <iframe
-                        src="https://maps.app.goo.gl/TnQThTJeEczUpSoy6"
+                        src="https://2gis.kz/almaty/firm/9429940000801589?m=76.949911%2C43.242245%2F16"
                         allowFullScreen={true}
                         loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"
