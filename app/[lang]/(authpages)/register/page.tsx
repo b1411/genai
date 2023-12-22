@@ -48,16 +48,16 @@ export default function RegisterPage() {
 				<div className="vstack gap-4 mt-10">
 					<button type="button" className="btn account-btn py-4">
 						<Image src={googleIcon} alt="" width="24" className="img-fluid icon" />
-						<span>Continue With Google</span>
+						<span>Продолжить через Google</span>
 					</button>
 					<button type="button" className="btn account-btn py-4">
 						<Image src={appleIcon} alt="icon" height="24" className="img-fluid icon" />
-						<span>Continue With Apple</span>
+						<span>Продолжить через Apple</span>
 					</button>
 				</div>
 
 				<div className="divider-with-text my-10">
-					<span>Or register with email</span>
+					<span>Продолжить через email</span>
 				</div>
 
 				<form onSubmit={handleSubmit(onSubmit)} className="vstack gap-4">
