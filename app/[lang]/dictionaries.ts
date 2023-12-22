@@ -1,8 +1,13 @@
-import "server-only"
+import { ru } from "./dictionaries/ru";
+import { en } from "./dictionaries/en";
 
-const dictionaries: { [key: string]: () => Promise<{}> } = {
-    "en": () => import("./dictionaries/en.json").then((m) => m.default),
-    "ru": () => import("./dictionaries/ru.json").then((m) => m.default)
+export function getDictionary(lang: string) {
+    switch (lang) {
+        case "ru":
+            return ru;
+        case "en":
+            return en;
+        default:
+            return ru;
+    }
 }
-
-export const getDictionary = async (locale: string) => await dictionaries[locale]()

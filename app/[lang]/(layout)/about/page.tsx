@@ -12,8 +12,8 @@ export const metadata: Metadata = {
 	title: "О нас",
 };
 
-export default async function AboutPage({ params: { lang } }: { params: { lang: string } }) {
-	const dict = await getDictionary(lang);
+export default function AboutPage({ params: { lang } }: { params: { lang: string } }) {
+	const dict = getDictionary(lang);
 
 	return (
 		<main className="flex-grow-1">

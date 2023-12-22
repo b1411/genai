@@ -9,8 +9,8 @@ export const metadata: Metadata = {
     title: "Тарифы",
 };
 
-export default async function PricingPlans({ params: { lang } }: { params: { lang: string } }) {
-    const dict = await getDictionary(lang);
+export default function PricingPlans({ params: { lang } }: { params: { lang: string } }) {
+    const dict = getDictionary(lang);
     return (
         <main className="flex-grow-1">
             <Breadcrumb

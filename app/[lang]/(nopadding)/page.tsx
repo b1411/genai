@@ -11,18 +11,16 @@ import Reveal from "@/components/utils/Reveal";
 import { Metadata } from "next";
 import { Fragment } from "react";
 import { getDictionary } from "../dictionaries";
-
 export const metadata: Metadata = {
     title: "Главная",
 };
 
-export default async function Home({ params: { lang } }: { params: { lang: string } }) {
-    const dict = await getDictionary(lang);
-    console.log(dict);
+export default function Home({ params: { lang } }: { params: { lang: string } }) {
+    const dict: dict = getDictionary(lang);
     return (
         <Fragment>
             <main className="flex-grow-1">
-                <Herosection />
+                <Herosection dict={dict.home.herosection} />
 
                 <FeaturesSection />
 

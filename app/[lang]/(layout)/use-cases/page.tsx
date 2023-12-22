@@ -10,8 +10,8 @@ export const metadata: Metadata = {
     title: "Примеры применения",
 };
 
-export default async function UseCases({ params: { lang } }: { params: { lang: string } }) {
-    const dict = await getDictionary(lang);
+export default function UseCases({ params: { lang } }: { params: { lang: string } }) {
+    const dict = getDictionary(lang);
     return (
         <main className="flex-grow-1">
             <Breadcrumb

@@ -8,8 +8,8 @@ export const metadata: Metadata = {
 	title: "Контакты",
 };
 
-export default async function ContactPage({ params: { lang } }: { params: { lang: string }}) {
-	const dict = await getDictionary(lang);
+export default function ContactPage({ params: { lang } }: { params: { lang: string }}) {
+	const dict = getDictionary(lang);
 	return (
 		<main className="flex-grow-1">
 			<Breadcrumb

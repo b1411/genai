@@ -20,9 +20,9 @@ export function generateMetadata({ params }: { params: { slug: string; lang: str
     };
 }
 
-export default async function UsecaseDetails({ params }: { params: { slug: string; lang: string } }) {
+export default function UsecaseDetails({ params }: { params: { slug: string; lang: string } }) {
     const { slug: slugFromUrl } = params;
-    const dict = await getDictionary(params.lang);
+    const dict = getDictionary(params.lang);
     const { title, description, slug, content } = getusecaseData(slugFromUrl);
 
     return (
