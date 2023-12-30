@@ -31,6 +31,7 @@ export const en = {
             "Contact us today and find out how TANIR Technology can be your trusted partner in the world of artificial intelligence. Together we will create the future of your business.",
         copyright: "All rights reserved",
         distribution: "News & updates",
+        useCaseLinks: "Use\nCases",
     },
     newsletter: {
         form: {

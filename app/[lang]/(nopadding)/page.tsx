@@ -53,7 +53,7 @@ export default function Home({ params: { lang } }: { params: { lang: string } })
 
                 <FaqSection />
 
-                <CtaHome />
+                <CtaHome lang={lang} />
             </main>
             <ModalForm isOpen={false} />
         </Fragment>

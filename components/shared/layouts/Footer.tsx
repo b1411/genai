@@ -54,9 +54,7 @@ export default function Footer({ lang }: { lang: string }) {
                             </div>
                             <div className="col-md-4 col-lg-4">
                                 <div className="footer-widget text-center text-md-start">
-                                    <h6 className="text-white mb-2">
-                                        Примеры <br /> использования
-                                    </h6>
+                                    <h6 className="text-white mb-2">{dict.useCaseLinks}</h6>
                                     <ul className="link-list list-unstyled mb-0">
                                         {dataUsecases.map((usecase) => (
                                             <li key={usecase.slug}>
