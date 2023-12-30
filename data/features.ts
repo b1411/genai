@@ -1,11 +1,10 @@
-import {TFeature} from "@/types/feature";
+import { TFeature } from "@/types/feature";
 
 export const dataFeatures: TFeature[] = [
     {
         id: 1,
         title: "Безупречная Эффективность",
-        description:
-            "Надежные решения, которые не устают и не совершают ошибок.",
+        description: "Надежные решения, которые не устают и не совершают ошибок.",
         icon: "alpha",
     },
     {
@@ -22,23 +21,23 @@ export const dataFeatures: TFeature[] = [
     },
 ];
 
-export const dataFeatures2: TFeature[] = [
+export const dataFeaturesEn: TFeature[] = [
     {
         id: 1,
-        title: "Generates quality contents",
-        description:
-            "This tool helps you find the right keywords to target for your content. By using the Google Keyword Planner, you can see how often people",
+        title: "Impeccable Efficiency",
+        description: "Reliable solutions that do not get tired and do not make mistakes.",
+        icon: "alpha",
     },
     {
         id: 2,
-        title: "Provides Useful Suggestions",
-        description:
-            "GenAI writing tools can analyze data and generate insights to help writers create more compelling and informative content.",
+        title: "Uninterrupted Performance",
+        description: "Work around the clock, ensuring the continuity of business processes.",
+        icon: "brand-juejin",
     },
     {
         id: 3,
-        title: "Improves Products Productivity",
-        description:
-            "Emotions are a powerful tool in advertising. Use emotions that resonate with your audience to create a connection.",
+        title: "Minimal Risk of Errors",
+        description: "Exceptional accuracy in performing tasks to optimize business processes.",
+        icon: "3d-cube-sphere",
     },
 ];

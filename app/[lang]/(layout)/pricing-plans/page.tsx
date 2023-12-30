@@ -26,11 +26,11 @@ export default function PricingPlans({ params: { lang } }: { params: { lang: str
                 ]}
             />
 
-            <PricingSection2 />
+            <PricingSection2 lang={lang} />
 
             <FaqSection />
 
-            <CtaHome />
+            <CtaHome lang={lang} />
         </main>
     );
 }

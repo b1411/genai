@@ -1,4 +1,4 @@
-import { dataFeatures2 } from "@/data/features";
+import { dataFeatures } from "@/data/features";
 import Link from "next/link";
 import Reveal from "../utils/Reveal";
 import Feature from "./Feature";
@@ -15,7 +15,7 @@ export default function FeaturesSection2() {
 				</div>
 
 				<div className="row g-6 g-xl-14">
-					{dataFeatures2.map((feature, index) => (
+					{dataFeatures.map((feature, index) => (
 						<Reveal key={feature.id} className="col-lg-4" delay={0.2}>
 							<Feature data={feature} index={index} />
 						</Reveal>

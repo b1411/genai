@@ -4,26 +4,21 @@ import heroImage from "@/public/images/screens/screen-4.png";
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "../utils/Reveal";
+import { getDictionary } from "@/app/[lang]/dictionaries";
 
-export default function AboutSection() {
+export default function AboutSection({ lang }: { lang: string }) {
+    const dict = getDictionary(lang).about;
     return (
         <section className="py-15">
             <div className="container">
                 <div className="row align-center">
                     <Reveal className="col-lg-6 col-xl-5" delay={0.05}>
                         <div className="text-center text-lg-start">
-                            <p className="text-primary-dark fs-sm">О TANIR</p>
-                            <h2 className="mb-4 text-white">
-                                Знакомьтесь с TANIR Technology: Мыслящие в будущем
-                            </h2>
-                            <p className="mb-8">
-                                Узнайте больше о TANIR Technology - компании, которая воплощает
-                                будущее в мире искусственного интеллекта. Наша миссия, ценности и
-                                команда экспертов, готовых изменить бизнес-мир с помощью
-                                инновационных AI-решений
-                            </p>
+                            <p className="text-primary-dark fs-sm">{dict.aboutSection.subtitle}</p>
+                            <h2 className="mb-4 text-white">{dict.aboutSection.title}А</h2>
+                            <p className="mb-8">{dict.aboutSection.description}</p>
                             <Link href="/login" className="btn btn-lg btn-gradient-1">
-                                Узнать больше о нас
+                                {dict.aboutSection.buttonText}
                             </Link>
                         </div>
                     </Reveal>

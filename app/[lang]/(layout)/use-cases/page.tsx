@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 export default function UseCases({ params: { lang } }: { params: { lang: string } }) {
-    const dict = getDictionary(lang);
+    const dict = getDictionary(lang).useCases;
     return (
         <main className="flex-grow-1">
             <Breadcrumb
@@ -33,10 +33,10 @@ export default function UseCases({ params: { lang } }: { params: { lang: string 
                         <div className="col-lg-9">
                             <div className="text-center">
                                 <Reveal el="p" delay={0.05} className="text-primary-dark">
-                                    Примеры применения
+                                    {dict.subtitle}
                                 </Reveal>
                                 <Reveal el="h1" className="text-white mb-0" delay={0.1}>
-                                    Узнайте, как наши AI-решения могут улучшить ваш бизнес
+                                    {dict.title}
                                 </Reveal>
                             </div>
                         </div>
@@ -49,7 +49,7 @@ export default function UseCases({ params: { lang } }: { params: { lang: string 
 
             <FaqSection />
 
-            <CtaHome />
+            <CtaHome lang={lang} />
         </main>
     );
 }

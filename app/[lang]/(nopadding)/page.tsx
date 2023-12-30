@@ -16,13 +16,13 @@ export const metadata: Metadata = {
 };
 
 export default function Home({ params: { lang } }: { params: { lang: string } }) {
-    const dict: dict = getDictionary(lang);
+    const dict = getDictionary(lang);
     return (
         <Fragment>
             <main className="flex-grow-1">
-                <Herosection dict={dict.home.herosection} />
+                <Herosection />
 
-                <FeaturesSection />
+                <FeaturesSection lang={lang} />
 
                 <BlockFeatureSection />
 
@@ -33,10 +33,10 @@ export default function Home({ params: { lang } }: { params: { lang: string } })
                             <div className="col-lg-9">
                                 <div className="text-center">
                                     <Reveal el="p" className="text-primary-dark" delay={0.05}>
-                                        Примеры применения
+                                        {dict.home.useCasesSection.subtitle}
                                     </Reveal>
                                     <Reveal el="h1" className="text-white mb-0" delay={0.1}>
-                                        Узнайте, как наши AI-решения могут улучшить ваш бизнес
+                                        {dict.home.useCasesSection.title}
                                     </Reveal>
                                 </div>
                             </div>

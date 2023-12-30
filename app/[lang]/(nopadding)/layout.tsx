@@ -4,15 +4,18 @@ import WithoutPaddingLayout from "@/components/shared/layouts/WithoutPaddingLayo
 import React from "react";
 
 type TRootLayoutProps = {
-	children: React.ReactNode;
+    children: React.ReactNode;
+    params: {
+        lang: string;
+    };
 };
 
-export default function WithLayoutPages({ children }: TRootLayoutProps) {
-	return (
-		<WithoutPaddingLayout>
-			<Header />
-			{children}
-			<Footer />
-		</WithoutPaddingLayout>
-	);
+export default function WithLayoutPages({ children, params: { lang } }: TRootLayoutProps) {
+    return (
+        <WithoutPaddingLayout>
+            <Header />
+            {children}
+            <Footer lang={lang} />
+        </WithoutPaddingLayout>
+    );
 }

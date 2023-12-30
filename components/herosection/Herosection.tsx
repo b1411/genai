@@ -8,8 +8,13 @@ import Image from "next/image";
 import Link from "next/link";
 import Reveal from "../utils/Reveal";
 import TypedText from "./TypedText";
+import { usePathname } from "next/navigation";
+import { getDictionary } from "@/app/[lang]/dictionaries";
 
-export default function Herosection({ dict }: { dict: any }) {
+export default function Herosection() {
+    const router = usePathname();
+    const lang = router.split("/")[1];
+    let dict = getDictionary(lang).home.herosection;
     return (
         <section
             className="hero-section style-1 overflow-hidden bg-dark pt-30 pb-15 pb-lg-20 pt-xl-36"

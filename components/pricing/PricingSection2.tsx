@@ -1,17 +1,23 @@
 "use client";
 
-import { dataPricing6 as dataPricing } from "@/data/pricing";
+import { dataPricing6 as dataPricing, dataPricingEn6 } from "@/data/pricing";
 import { TPricing, TPricingPlanType } from "@/types/pricing";
 import { ChangeEvent, SyntheticEvent, useEffect, useState } from "react";
 import Reveal from "../utils/Reveal";
 import Pricebox from "./Pricebox";
+import { getDictionary } from "@/app/[lang]/dictionaries";
 
-export default function PricingSection2() {
+export default function PricingSection2({ lang }: { lang: string }) {
     const [pricintPlanType, setPricintPlanType] = useState<TPricingPlanType>("monthly");
     const [visibleData, setVisibleData] = useState<TPricing[]>([]);
 
+    let data: TPricing[] = [];
+    lang === "ru" ? (data = dataPricing) : (data = dataPricingEn6);
+
+    const dict = getDictionary(lang).pricingPlans;
+
     useEffect(() => {
-        setVisibleData(dataPricing.filter((pricing) => pricing.type === pricintPlanType));
+        setVisibleData(data.filter((pricing) => pricing.type === pricintPlanType));
     }, [pricintPlanType]);
 
     const handleChange = (
@@ -29,14 +35,13 @@ export default function PricingSection2() {
                     <div className="col-lg-10">
                         <div className="text-center">
                             <Reveal el="p" className="text-primary-dark" delay={0.05}>
-                                Наши тарифы
+                                {dict.pricingSection2.subtitle}
                             </Reveal>
                             <Reveal el="h1" className="text-white mb-5" delay={0.1}>
-                                Подходящие тарифы для ваших требований
+                                {dict.pricingSection2.title}
                             </Reveal>
                             <Reveal el="p" className="mb-0" delay={0.15}>
-                                Получите максимум от наших услуг с нашими разнообразными и гибкими
-                                тарифами. Решения, подходящие именно для ваших бизнес-потребностей
+                                {dict.pricingSection2.description}
                             </Reveal>
                         </div>
                         {/* <Reveal className="text-center mt-12" delay={0.2}>

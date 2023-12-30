@@ -4,9 +4,10 @@ import { leftFillNumber } from "@/utils/helpers";
 type TFeatureProps = {
 	data: TFeature;
 	index: number;
+	lang: string;
 };
 
-export default function Feature({ data, index }: TFeatureProps) {
+export default function Feature({ data, index, lang }: TFeatureProps) {
 	const { title, description, icon } = data;
 
 	return (

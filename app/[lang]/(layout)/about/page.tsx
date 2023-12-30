@@ -30,17 +30,17 @@ export default function AboutPage({ params: { lang } }: { params: { lang: string
 				]}
 			/>
 
-			<AboutSection />
+			<AboutSection lang={lang} />
 
-			<FeaturesSection3 />
+			<FeaturesSection3 lang={lang} />
 
-			<TeamSection />
+			{/* <TeamSection /> */}
 
 			<ReviewsSection />
 
-			<BrandLogoSection2 />
+			{/* <BrandLogoSection2 /> */}
 
-			<CtaHome />
+			<CtaHome lang={lang} />
 		</main>
 	);
 }

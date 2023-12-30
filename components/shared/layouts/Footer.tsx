@@ -3,9 +3,34 @@ import footerLogo from "@/public/images/logo.png";
 import Image from "next/image";
 import Link from "next/link";
 import { getUsecasesMetadata } from "@/utils/usecases";
-import classNames from "classnames";
+import { getDictionary } from "@/app/[lang]/dictionaries";
 
-export default function Footer() {
+const footerLinks = [
+    { title: "Главная", link: "/" },
+    { title: "О нас", link: "/about" },
+    { title: "Кейсы", link: "/use-cases" },
+    { title: "Стоимость", link: "/pricing-plans" },
+    { title: "Контакты", link: "/contact" },
+];
+
+const footerLinksEn = [
+    { title: "Home", link: "/en" },
+    { title: "About", link: "/en/about" },
+    { title: "Use cases", link: "/en/use-cases" },
+    { title: "Pricing", link: "/en/pricing-plans" },
+    { title: "Contacts", link: "/en/contact" },
+];
+
+export default function Footer({ lang }: { lang: string }) {
+    let data = [];
+    if (lang === "en") {
+        data = footerLinksEn;
+    } else {
+        data = footerLinks;
+    }
+
+    const dict = getDictionary(lang).footer;
+
     const dataUsecases = getUsecasesMetadata(8);
     return (
         <footer className="footer bg-striped pt-10 pt-lg-15">
@@ -17,21 +42,13 @@ export default function Footer() {
                                 <div className="footer-widget text-center text-md-start">
                                     <h6 className="text-white mb-2">TANIR</h6>
                                     <ul className="link-list list-unstyled mb-0">
-                                        <li>
-                                            <Link href="/">Главная</Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/about">О нас</Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/use-cases">Кейсы</Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/pricing-plans">Стоимость</Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/contact">Контакты</Link>
-                                        </li>
+                                        {data.map((el) => {
+                                            return (
+                                                <li key={el.title}>
+                                                    <Link href={el.link}>{el.title}</Link>
+                                                </li>
+                                            );
+                                        })}
                                     </ul>
                                 </div>
                             </div>
@@ -53,8 +70,8 @@ export default function Footer() {
                             </div>
                             <div className="col-md-4 col-lg-4">
                                 <div className="footer-widget text-center text-md-start">
-                                    <h6 className="text-white mb-4">Новости и обновления</h6>
-                                    <Newsletter />
+                                    <h6 className="text-white mb-4">{dict.distribution}</h6>
+                                    <Newsletter lang={lang} />
                                     {/* <ul className="list-unstyled d-flex flex-wrap align-center justify-center justify-md-start gap-3 social-list mb-0 mt-5">
                                         <li>
                                             <a href="#">
@@ -170,19 +187,15 @@ export default function Footer() {
                                     priority
                                 />
                             </Link>
-                            <p className="fs-sm mb-0 mt-4">
-                                Свяжитесь с нами сегодня и узнайте, как TANIR Technology может стать
-                                вашим надежным партнером в мире искусственного интеллекта. Вместе мы
-                                создадим будущее вашего бизнеса.
-                            </p>
+                            <p className="fs-sm mb-0 mt-4">{dict.description}</p>
                         </div>
                     </div>
                 </div>
 
                 <div className="text-center py-6 mt-8">
                     <p className="fs-sm mb-0">
-                        © 2023 <span className="text-primary-dark">TANIR Technology</span> Все
-                        права защищены.
+                        © 2023 <span className="text-primary-dark">TANIR Technology</span>{" "}
+                        {dict.copyright}
                     </p>
                 </div>
             </div>

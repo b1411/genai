@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import "react-toastify/dist/ReactToastify.min.css";
 import "swiper/css";
 import "swiper/css/pagination";
-// vs-code-organize-imports-disable-next-line
 import "@/scss/style.scss";
 import "@/css/main.css";
 import Link from "next/link";
@@ -21,9 +20,12 @@ export const metadata: Metadata = {
 
 type TRootLayoutProps = {
     children: React.ReactNode;
+    params: {
+        lang: string;
+    };
 };
 
-export default function RootLayout({ children }: TRootLayoutProps) {
+export default function RootLayout({ children, params: { lang } }: TRootLayoutProps) {
     return (
         <html lang="ru" data-bs-theme="dark">
             <head>

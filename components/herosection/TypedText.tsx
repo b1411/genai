@@ -2,11 +2,16 @@
 
 import { useEffect, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
+import { usePathname } from "next/navigation";
+import { getDictionary } from "@/app/[lang]/dictionaries";
 
-let strings = ["инновации", 1500, "эффективность", 1500, "будущее", 1500];
 
 export default function TypedText() {
     const [isMounted, setIsMounted] = useState(false);
+
+    const router = usePathname().split("/")[1].toString();
+    const lang = router as string;
+    const strings = getDictionary(lang).home.herosection.typedText;
 
     useEffect(() => {
         setIsMounted(true);
