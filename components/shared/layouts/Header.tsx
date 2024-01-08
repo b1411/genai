@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { SyntheticEvent, useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
+import LanguageSwitcher from "@/components/utils/LanguageSwitcher"
 
 type TNavItem = {
     id: number;
@@ -300,6 +301,9 @@ export default function Header() {
                                 />
                             ))}
                         </ul>
+                        <div className="">
+                            <LanguageSwitcher />
+                        </div>
                         <div className="">
                             <Link href="/contact" className="btn btn-outline-primary-dark">
                                 {lang === "en" ? "Contact us" : "Связаться с нами"}
