@@ -9,13 +9,16 @@ type TBlogPageProps = {
 	searchParams: {
 		page: string;
 	};
+	params: {
+		lang: string;
+	}
 };
 
 export const metadata: Metadata = {
 	title: "Blogs",
 };
 
-export default function BlogsPage({ searchParams }: TBlogPageProps) {
+export default function BlogsPage({ searchParams, params }: TBlogPageProps) {
 	const pageNumber = parseInt(searchParams?.page) || 1;
 	const { posts, totalPage } = getPostsMetadata(pageNumber);
 
@@ -45,7 +48,7 @@ export default function BlogsPage({ searchParams }: TBlogPageProps) {
 				</div>
 			</section>
 
-			<CtaHome />
+			<CtaHome lang={params.lang} />
 		</main>
 	);
 }
