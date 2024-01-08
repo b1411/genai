@@ -6,7 +6,7 @@ import path, { parse } from "path";
 
 let locales = ["en", "ru"];
 
-function getLocale(request: NextRequest, pathname: string): string {
+function getLocale(request: NextRequest): string {
     let locales = ["en", "ru"];
     let defaultLocale = "en";
 
@@ -21,36 +21,26 @@ function getLocale(request: NextRequest, pathname: string): string {
     return acceptedLanguage;
 }
 
-function parseLocaleFromReferer(request: NextRequest): string | null {
-    const referer = request.headers.get("referer");
-    if (!referer) {
-        return null;
-    }
-
-    const url = new URL(referer);
-    const locale = url.pathname.split("/")[1];
-    return locales.includes(locale) ? locale : null;
-}
-
 export function middleware(request: NextRequest) {
-    let pathname = request.nextUrl.pathname;
-    let targetLocale = null;
+    const localeFromPathname = request.nextUrl.pathname.split("/")[1];
 
-    // Check if the URL contains a locale
-    if (locales.includes(pathname.split("/")[1])) {
-        targetLocale = pathname.split("/")[1];
-        console.log("URL locale: " + targetLocale);
-        return
-    } else if (parseLocaleFromReferer(request)) {
-        targetLocale = parseLocaleFromReferer(request);
-        console.log("Referer locale: " + targetLocale);
+    const referer = request.headers.get("referer");
+
+    const refererLocale = referer ? new URL(referer).pathname.split("/")[1] : null;
+
+    if (!locales.includes(localeFromPathname)) {
+        let locale;
+        if (locales.includes(refererLocale as string)) {
+            locale = refererLocale;
+        } else {
+            locale = getLocale(request);
+        }
+
+        request.nextUrl.pathname = `/${locale}${request.nextUrl.pathname}`;
+        return Response.redirect(request.nextUrl);
     } else {
-        targetLocale = getLocale(request, pathname);
-        console.log("Locale: " + targetLocale);
+        return;
     }
-
-    request.nextUrl.pathname = `/${targetLocale}${pathname}`;
-    return NextResponse.redirect(request.nextUrl);
 }
 
 export const config = {

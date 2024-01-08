@@ -1,38 +1,33 @@
-"use client";
-
-import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function LanguageSwitcher() {
-    let currentPath = usePathname();
-    let router = useRouter();
+    const currentPath = usePathname();
+    const router = useRouter();
 
-    let [currentLocale, setCurrentLocale] = useState();
-
-    let [currentPathRuLocale, setCurrentPathRuLocale] = useState("");
-    let [currentPathEnLocale, setCurrentPathEnLocale] = useState("");
+    const [currentLocale, setCurrentLocale] = useState();
 
     useEffect(() => {
-        setCurrentPathRuLocale(currentPath.replace("/en", "/ru"));
-        setCurrentPathEnLocale(currentPath.replace("/ru", "/en"));
-
-        if (currentPath.includes("/ru")) {
-            setCurrentLocale("ru");
-        } else if (currentPath.includes("/en")) {
-            setCurrentLocale("en");
+        // Определяем текущую локаль из пути
+        const localeSegment = currentPath.split("/")[1];
+        if (localeSegment === "ru" || localeSegment === "en") {
+            setCurrentLocale(localeSegment);
+        } else {
+            setCurrentLocale("en"); // Устанавливаем английский по умолчанию, если локаль не определена
         }
     }, [currentPath]);
 
     function handleChange(e) {
-        let newPath = e.target.value;
-        router.push(newPath);
+        const newLocale = e.target.value;
+        // Обновляем URL, заменяя локаль
+        const newPath = currentPath.replace(/^\/(en|ru)/, `/${newLocale}`);
+        window.location.href = newPath;
     }
 
     return (
-        <select className="form-select" onChange={handleChange} value={currentPath}>
-            <option value={currentPathRuLocale}>Русский</option>
-            <option value={currentPathEnLocale}>English</option>
+        <select className="form-select" onChange={handleChange} value={currentLocale}>
+            <option value="en">English</option>
+            <option value="ru">Русский</option>
         </select>
     );
 }
