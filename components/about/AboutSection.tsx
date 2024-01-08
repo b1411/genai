@@ -15,7 +15,7 @@ export default function AboutSection({ lang }: { lang: string }) {
                     <Reveal className="col-lg-6 col-xl-5" delay={0.05}>
                         <div className="text-center text-lg-start">
                             <p className="text-primary-dark fs-sm">{dict.aboutSection.subtitle}</p>
-                            <h2 className="mb-4 text-white">{dict.aboutSection.title}А</h2>
+                            <h2 className="mb-4 text-white">{dict.aboutSection.title}</h2>
                             <p className="mb-8">{dict.aboutSection.description}</p>
                             <Link href="/login" className="btn btn-lg btn-gradient-1">
                                 {dict.aboutSection.buttonText}

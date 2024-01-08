@@ -128,6 +128,15 @@ export default function ContactForm() {
                         },
                     })}
                     className="form-control rounded-2"
+                    style={{
+                        resize: "none",
+                        minHeight: "200px",
+                        overflowY: "hidden"
+                    }}
+                    onInput={(e: SyntheticEvent<HTMLTextAreaElement>) => {
+                        e.currentTarget.style.height = "auto";
+                        e.currentTarget.style.height = e.currentTarget.scrollHeight + "px";
+                    }}
                     placeholder="Напишите свое сообщение"
                     rows={4}
                 ></textarea>
