@@ -27,7 +27,7 @@ export default function ContactPage({ params: { lang } }: { params: { lang: stri
 
 			<ContactSection />
 
-			<CtaHome />
+			<CtaHome lang={lang} />
 		</main>
 	);
 }

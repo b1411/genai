@@ -81,7 +81,28 @@ export const en = {
         pricingSection2: {
             subtitle: "Our tariffs",
             title: "Suitable for any business",
-            description: "Get the most out of our services with our varied and flexible plans. Solutions tailored to your business needs"
-        }
+            description:
+                "Get the most out of our services with our varied and flexible plans. Solutions tailored to your business needs",
+        },
+    },
+    contact: {
+        title: "Contact us",
+        subtitle: "We are always ready to help you",
+        form: {
+            name: {
+                placeholder: "Name",
+                requiredError: "Name is required",
+            },
+            email: {
+                placeholder: "Email",
+                requiredError: "Email is required",
+                invalidError: "Email is invalid",
+            },
+            message: {
+                placeholder: "Message",
+                requiredError: "Message is required",
+            },
+            submitButton: "Send",
+        },
     }
 };
