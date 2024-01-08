@@ -27,9 +27,9 @@ export function generateMetadata({ params }: TGenerateMetadataProps): Metadata {
 	};
 }
 
-export default function BlogDetailsPage({ params }: TBlogDetailsPageProps) {
-	const { slug: slugFromUrl } = params;
-	const { title, category, date, readingTime, cover, content, author } = getPostData(slugFromUrl);
+export default function BlogDetailsPage({ params: {lang, slug} }: {params: {lang: string, slug: string}}) {
+
+	const { title, category, date, readingTime, cover, content, author } = getPostData(slug);
 
 	return (
 		<main className="flex-grow-1">
@@ -106,7 +106,7 @@ export default function BlogDetailsPage({ params }: TBlogDetailsPageProps) {
 				</div>
 			</section>
 
-			<CtaHome />
+			<CtaHome lang={lang} />
 		</main>
 	);
 }
