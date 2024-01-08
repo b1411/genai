@@ -55,7 +55,7 @@ export default function UsecaseDetails({ params }: { params: { slug: string; lan
                                     развитии AI-технологий и инноваций
                                 </p>
                                 <div className="w-xl-3quarter">
-                                    <Newsletter />
+                                    <Newsletter lang={params.lang} />
                                 </div>
                             </div>
                         </Reveal>
@@ -102,7 +102,7 @@ export default function UsecaseDetails({ params }: { params: { slug: string; lan
 
             <FaqSection />
 
-            <CtaHome />
+            <CtaHome lang={params.lang} />
         </main>
     );
 }

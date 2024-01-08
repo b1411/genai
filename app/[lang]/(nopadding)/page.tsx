@@ -6,7 +6,6 @@ import Herosection from "@/components/herosection/Herosection";
 import PricingSection from "@/components/pricing/PricingSection";
 import ReviewsSection from "@/components/reviews/ReviewsSection";
 import UsecaseSection from "@/components/usecase/UsecaseSection";
-import ModalForm from "@/components/utils/ModalForm";
 import Reveal from "@/components/utils/Reveal";
 import { Metadata } from "next";
 import { Fragment } from "react";
@@ -55,7 +54,6 @@ export default function Home({ params: { lang } }: { params: { lang: string } })
 
                 <CtaHome lang={lang} />
             </main>
-            <ModalForm isOpen={false} />
         </Fragment>
     );
 }

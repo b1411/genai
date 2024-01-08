@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 	title: "Page not found",
 };
 
-export default function NotFound() {
+export default function NotFound({params: {lang}}: {params: {lang: string}}) {
 	return (
 		<WithPaddingLayout>
 			<Header />
@@ -40,7 +40,7 @@ export default function NotFound() {
 					</div>
 				</section>
 			</main>
-			<Footer />
+			<Footer lang={lang} />
 		</WithPaddingLayout>
 	);
 }
