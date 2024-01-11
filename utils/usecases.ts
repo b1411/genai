@@ -5,38 +5,41 @@ import path from "path";
 
 const FOLDER_PATH = path.join(process.cwd(), "usecases");
 
-export const getUsecasesMetadata = (limit: number = 0): TUsecaseMetadata[] => {
-	const files = fs.readdirSync(FOLDER_PATH);
-	const markdownPosts = files.filter((file) => file.endsWith(".md"));
+export const getUsecasesMetadata = (limit: number = 0, lang: string = "ru"): TUsecaseMetadata[] => {
+    const files = fs.readdirSync(FOLDER_PATH);
+    const markdownPosts =
+        lang === "ru"
+            ? files.filter((file) => file.endsWith(".ru.md"))
+            : files.filter((file) => file.endsWith(".en.md"));
 
-	const posts = markdownPosts.map((fileName) => {
-		const fileContents = fs.readFileSync(path.join(FOLDER_PATH, fileName), "utf-8");
-		const { data: postMeta } = matter(fileContents);
+    const posts = markdownPosts.map((fileName) => {
+        const fileContents = fs.readFileSync(path.join(FOLDER_PATH, fileName), "utf-8");
+        const { data: postMeta } = matter(fileContents);
 
-		return {
-			title: postMeta.title,
-			description: postMeta.description,
-			icon: postMeta.icon,
-			slug: fileName.replace(".md", ""),
-		};
-	});
+        return {
+            title: postMeta.title,
+            description: postMeta.description,
+            icon: postMeta.icon,
+            slug: fileName.replace(".md", ""),
+        };
+    });
 
-	if (limit) {
-		return posts.slice(0, limit);
-	} else {
-		return posts;
-	}
+    if (limit) {
+        return posts.slice(0, limit);
+    } else {
+        return posts;
+    }
 };
 
 export const getusecaseData = (slug: string): TUsecaseData => {
-	const fileContents = fs.readFileSync(path.join(FOLDER_PATH, `${slug}.md`), "utf-8");
-	const { data: postMeta, content: postContent } = matter(fileContents);
+    const fileContents = fs.readFileSync(path.join(FOLDER_PATH, `${slug}.md`), "utf-8");
+    const { data: postMeta, content: postContent } = matter(fileContents);
 
-	return {
-		title: postMeta.title,
-		description: postMeta.description,
-		icon: postMeta.icon,
-		slug: slug,
-		content: postContent,
-	};
+    return {
+        title: postMeta.title,
+        description: postMeta.description,
+        icon: postMeta.icon,
+        slug: slug,
+        content: postContent,
+    };
 };

@@ -7,12 +7,9 @@ import PricingSection from "@/components/pricing/PricingSection";
 import ReviewsSection from "@/components/reviews/ReviewsSection";
 import UsecaseSection from "@/components/usecase/UsecaseSection";
 import Reveal from "@/components/utils/Reveal";
-import { Metadata } from "next";
+import { Metadata, ResolvingMetadata } from "next";
 import { Fragment } from "react";
 import { getDictionary } from "../dictionaries";
-export const metadata: Metadata = {
-    title: "Главная",
-};
 
 export default function Home({ params: { lang } }: { params: { lang: string } }) {
     const dict = getDictionary(lang);
@@ -41,7 +38,7 @@ export default function Home({ params: { lang } }: { params: { lang: string } })
                             </div>
                         </div>
                         <div className="row justify-center row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 gx-8 gy-14">
-                            <UsecaseSection limit={8} />
+                            <UsecaseSection lang={lang} limit={8} />
                         </div>
                     </div>
                 </section>
@@ -56,4 +53,14 @@ export default function Home({ params: { lang } }: { params: { lang: string } })
             </main>
         </Fragment>
     );
+}
+
+export async function generateMetadata(
+    { params: { lang } }: { params: { lang: string } },
+    parent: ResolvingMetadata,
+): Promise<Metadata> {
+    const title = getDictionary(lang).metatagTitle.homePage;
+    return {
+        title: title,
+    };
 }

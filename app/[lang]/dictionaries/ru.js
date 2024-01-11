@@ -67,7 +67,13 @@ export const ru = {
         buttonText: "Попробовать AI-Сотрудников",
     },
     useCases: {
-        slug: {},
+        slug: {
+            feedbackSection: {
+                title: "Будьте в курсе",
+                description:
+                    "Подпишитесь на наши новостные обновления и оставайтесь впереди в развитии AI-технологий и инноваций",
+            },
+        },
         subtitle: "Примеры использования",
         title: "Узнайте, как наши решения на базе ИИ могут улучшить ваш бизнес",
     },
@@ -78,5 +84,58 @@ export const ru = {
             description:
                 "Получите максимум от наших услуг с нашими разнообразными и гибкими тарифами. Решения, подходящие именно для ваших бизнес-потребностей!",
         },
+    },
+    contact: {
+        contactSection: {
+            contactForm: {
+                onSubmitMessages: {
+                    success: "Ваше сообщение успешно отправлено!",
+                    error: "Что-то пошло не так. Попробуйте еще раз.",
+                    duplicate: "Вы уже отправили сообщение. Попробуйте еще раз.",
+                },
+                form: {
+                    name: {
+                        placeholder: "Имя",
+                        requiredError: "Имя обязательно",
+                        label: "Имя",
+                        patternError: "Имя должно содержать только буквы",
+                    },
+                    email: {
+                        placeholder: "Email",
+                        requiredError: "Email обязателен",
+                        label: "Email",
+                        patternError: "Email неверный",
+                    },
+                    phone: {
+                        placeholder: "Телефон",
+                        requiredError: "Телефон обязателен",
+                        label: "Телефон",
+                        patternError: "Телефон неверный",
+                    },
+                    application: {
+                        placeholder: "Сообщение",
+                        requiredError: "Сообщение обязательно",
+                        label: "Сообщение",
+                    },
+                    submitButton: "Отправить",
+                },
+            },
+        },
+    },
+    breadcrumbs: {
+        home: "Главная",
+        about: "О нас",
+        useCases: "Примеры использования",
+        pricingPlans: "Тарифный план",
+        contact: "Контакты",
+    },
+    metatagTitle: {
+        homePage: "TANIR Technology - Лидер в области интеграции ИИ и инновационных решений",
+        aboutPage:
+            "О компании TANIR Technology - Экспертиза в области ИИ и технологических инноваций",
+        useCasesPage:
+            "Примеры использования ИИ от TANIR Technology - Реальные приложения и истории успеха",
+        pricingPlansPage: "Доступные решения ИИ - Тарифные планы TANIR Technology",
+        contactPage: "Связаться с TANIR Technology - Обратитесь к экспертам в области ИИ",
     },
 };

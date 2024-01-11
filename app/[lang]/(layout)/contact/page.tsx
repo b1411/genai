@@ -1,33 +1,37 @@
 import ContactSection from "@/components/contact/ContactSection";
 import CtaHome from "@/components/cta/CtaHome";
 import Breadcrumb from "@/components/shared/Breadcrumb";
-import { Metadata } from "next";
+import { Metadata, ResolvingMetadata } from "next";
 import { getDictionary } from "../../dictionaries";
 
-export const metadata: Metadata = {
-	title: "Контакты",
-};
+export default function ContactPage({ params: { lang } }: { params: { lang: string } }) {
+    const dict = getDictionary(lang);
+    const title = getDictionary(lang).metatagTitle.contactPage;
+    return (
+        <main className="flex-grow-1">
+            <Breadcrumb
+                title={dict.breadcrumbs.contact}
+                path={[
+                    {
+                        text: dict.breadcrumbs.home,
+                        link: "/",
+                    },
+                    {
+                        text: dict.breadcrumbs.contact,
+                    },
+                ]}
+            />
 
-export default function ContactPage({ params: { lang } }: { params: { lang: string }}) {
-	const dict = getDictionary(lang);
-	return (
-		<main className="flex-grow-1">
-			<Breadcrumb
-				title="Связаться с нами"
-				path={[
-					{
-						text: "Главная",
-						link: "/",
-					},
-					{
-						text: "Контакты",
-					},
-				]}
-			/>
+            <ContactSection lang={lang} />
 
-			<ContactSection />
+            <CtaHome lang={lang} />
+        </main>
+    );
+}
 
-			<CtaHome lang={lang} />
-		</main>
-	);
+export async function generateMetadata({params: {lang}}: {params: {lang: string}}, parent: ResolvingMetadata): Promise<Metadata> {
+    const title = getDictionary(lang).metatagTitle.contactPage;
+    return {
+        title: title
+    }
 }

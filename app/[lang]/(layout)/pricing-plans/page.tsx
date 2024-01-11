@@ -2,26 +2,24 @@ import CtaHome from "@/components/cta/CtaHome";
 import FaqSection from "@/components/faq/FaqSection";
 import PricingSection2 from "@/components/pricing/PricingSection2";
 import Breadcrumb from "@/components/shared/Breadcrumb";
-import { Metadata } from "next";
+import { Metadata, ResolvingMetadata } from "next";
 import { getDictionary } from "../../dictionaries";
-
-export const metadata: Metadata = {
-    title: "Тарифы",
-};
+import Head from "next/head";
 
 export default function PricingPlans({ params: { lang } }: { params: { lang: string } }) {
     const dict = getDictionary(lang);
+    const title = getDictionary(lang).metatagTitle.pricingPlansPage;
     return (
         <main className="flex-grow-1">
             <Breadcrumb
-                title="Тарифы"
+                title={dict.breadcrumbs.pricingPlans}
                 path={[
                     {
-                        text: "Главная",
+                        text: dict.breadcrumbs.home,
                         link: "/",
                     },
                     {
-                        text: "Тарифы",
+                        text: dict.breadcrumbs.pricingPlans,
                     },
                 ]}
             />
@@ -33,4 +31,11 @@ export default function PricingPlans({ params: { lang } }: { params: { lang: str
             <CtaHome lang={lang} />
         </main>
     );
+}
+
+export async function generateMetadata({params: {lang}}: {params: {lang: string}}, parent: ResolvingMetadata): Promise<Metadata> {
+    const title = getDictionary(lang).metatagTitle.pricingPlansPage;
+    return {
+        title: title
+    }
 }

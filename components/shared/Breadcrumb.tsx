@@ -1,5 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import Reveal from "../utils/Reveal";
+import { usePathname } from "next/navigation";
+import { getDictionary } from "@/app/[lang]/dictionaries";
 
 type TBreadcrumbProps = {
 	title: string;
@@ -10,6 +14,7 @@ type TBreadcrumbProps = {
 };
 
 export default function Breadcrumb({ title, path }: TBreadcrumbProps) {
+
 	return (
 		<Reveal el="section" className="py-10 py-lg-15 bg-striped" delay={0.05}>
 			<div className="container">

@@ -4,6 +4,7 @@ import { SyntheticEvent } from "react";
 import { useForm } from "react-hook-form";
 import Parse from "@/utils/parse";
 import { toast } from "react-toastify";
+import { getDictionary } from "@/app/[lang]/dictionaries";
 
 type TFormData = {
     name: string;
@@ -12,12 +13,14 @@ type TFormData = {
     message: string;
 };
 
-export default function ContactForm() {
+export default function ContactForm({ lang }: { lang: string }) {
     const {
         register,
         handleSubmit,
         formState: { errors },
     } = useForm<TFormData>();
+
+    const dict = getDictionary(lang).contact.contactSection.contactForm;
 
     const onSubmit = async (data: TFormData) => {
         const { name, email, phone, message } = data;
@@ -42,7 +45,7 @@ export default function ContactForm() {
         <form onSubmit={handleSubmit(onSubmit)} className="vstack gap-8">
             <div className="">
                 <label htmlFor="name" className="form-label fs-lg fw-medium mb-4">
-                    Ваше имя*{" "}
+                    {dict.form.name.label}*{" "}
                 </label>
                 <div className="input-group with-icon">
                     <span className="icon">
@@ -53,11 +56,15 @@ export default function ContactForm() {
                         {...register("name", {
                             required: {
                                 value: true,
-                                message: "Обязательное поле",
+                                message: dict.form.name.requiredError,
+                            },
+                            pattern: {
+                                value: /^[a-zA-Zа-яА-Я]+$/,
+                                message: dict.form.name.patternError,
                             },
                         })}
                         id="name"
-                        placeholder="Ваше имя"
+                        placeholder={dict.form.name.placeholder}
                         className="form-control rounded-2"
                     />
                 </div>
@@ -67,23 +74,27 @@ export default function ContactForm() {
             </div>
             <div className="">
                 <label htmlFor="email" className="form-label fs-lg fw-medium mb-4">
-                    Эл. почта
+                    {dict.form.email.label}
                 </label>
                 <div className="input-group with-icon">
                     <span className="icon">
                         <i className="ti ti-mail fs-5"></i>
                     </span>
                     <input
-                        type="text"
-                        {...register("email", {
-                            pattern: {
-                                value: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
-                                message: "Неправильный формат эл. почты",
-                            },
-                        })}
+                        type="email"
                         id="email"
                         className="form-control rounded-2"
-                        placeholder="Эл. почта"
+                        placeholder={dict.form.email.placeholder}
+                        {...register("email", {
+                            required: {
+                                value: true,
+                                message: dict.form.email.requiredError,
+                            },
+                            pattern: {
+                                value: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+                                message: dict.form.email.patternError,
+                            },
+                        })}
                     />
                 </div>
                 {errors.email?.message && (
@@ -92,7 +103,7 @@ export default function ContactForm() {
             </div>
             <div className="">
                 <label htmlFor="phone" className="form-label fs-lg fw-medium mb-4">
-                    Номер телефона*
+                    {dict.form.phone.label}*
                 </label>
                 <div className="input-group with-icon">
                     <span className="icon">
@@ -103,12 +114,12 @@ export default function ContactForm() {
                         {...register("phone", {
                             required: {
                                 value: true,
-                                message: "Обязательное поле",
+                                message: dict.form.phone.requiredError,
                             },
                         })}
                         id="phone"
                         className="form-control rounded-2"
-                        placeholder="Номер телефона"
+                        placeholder={dict.form.phone.placeholder}
                     />
                 </div>
                 {errors.phone?.message && (
@@ -117,27 +128,27 @@ export default function ContactForm() {
             </div>
             <div className="">
                 <label htmlFor="message" className="form-label fs-lg fw-medium mb-4">
-                    Ваше сообщение*
+                    {dict.form.application.label}*
                 </label>
                 <textarea
                     id="message"
                     {...register("message", {
                         required: {
                             value: true,
-                            message: "Обязательное поле",
+                            message: dict.form.application.requiredError,
                         },
                     })}
                     className="form-control rounded-2"
                     style={{
                         resize: "none",
                         minHeight: "200px",
-                        overflowY: "hidden"
+                        overflowY: "hidden",
                     }}
                     onInput={(e: SyntheticEvent<HTMLTextAreaElement>) => {
                         e.currentTarget.style.height = "auto";
                         e.currentTarget.style.height = e.currentTarget.scrollHeight + "px";
                     }}
-                    placeholder="Напишите свое сообщение"
+                    placeholder={dict.form.application.placeholder}
                     rows={4}
                 ></textarea>
                 {errors.message?.message && (
@@ -146,7 +157,7 @@ export default function ContactForm() {
             </div>
             <div className="">
                 <button type="submit" className="btn btn-primary-dark">
-                    Отправить
+                    {dict.form.submitButton}
                 </button>
             </div>
         </form>

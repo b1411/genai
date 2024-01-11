@@ -58,12 +58,6 @@ export const en = {
             },
         },
     },
-    breadcrumbs: {
-        home: "Home",
-        about: "About",
-        services: "Services",
-        contact: "Contact",
-    },
     ctaHome: {
         title: {
             textBeforeHeghlight: "By collaborating with",
@@ -73,7 +67,13 @@ export const en = {
         buttonText: "Get in touch",
     },
     useCases: {
-        slug: {},
+        slug: {
+            feedbackSection: {
+                title: "Stay informed",
+                description:
+                    "Subscribe to our news updates and stay ahead in the development of AI technologies and innovations",
+            },
+        },
         subtitle: "Use Cases",
         title: "Find out how our AI solutions can improve your business",
     },
@@ -86,23 +86,55 @@ export const en = {
         },
     },
     contact: {
-        title: "Contact us",
-        subtitle: "We are always ready to help you",
-        form: {
-            name: {
-                placeholder: "Name",
-                requiredError: "Name is required",
+        contactSection: {
+            contactForm: {
+                onSubmitMessages: {
+                    success: "Thank you for contacting us! We will get back to you soon.",
+                    error: "Something went wrong. Please try again.",
+                    duplicate: "You have already sent a message. Please try again.",
+                },
+                form: {
+                    name: {
+                        placeholder: "Name",
+                        requiredError: "Name is required",
+                        label: "Name",
+                        patternError: "Name must contain only letters",
+                    },
+                    email: {
+                        placeholder: "Email",
+                        requiredError: "Email is required",
+                        label: "Email",
+                        patternError: "Email is invalid",
+                    },
+                    phone: {
+                        placeholder: "Phone",
+                        requiredError: "Phone is required",
+                        label: "Phone",
+                        patternError: "Phone number is invalid",
+                    },
+                    application: {
+                        placeholder: "Message",
+                        requiredError: "The message is required",
+                        label: "Message",
+                    },
+                    submitButton: "Send",
+                },
             },
-            email: {
-                placeholder: "Email",
-                requiredError: "Email is required",
-                invalidError: "Email is invalid",
-            },
-            message: {
-                placeholder: "Message",
-                requiredError: "Message is required",
-            },
-            submitButton: "Send",
         },
-    }
+    },
+    breadcrumbs: {
+        home: "Home",
+        about: "About us",
+        useCases: "Use Examples",
+        pricingPlans: "Tariff plan",
+        contact: "Contacts",
+    },
+    metatagTitle: {
+        homePage: "TANIR Technology - Leading AI Integration and Innovative Solutions",
+        aboutPage: "About TANIR Technology - Expertise in AI and Tech Innovations",
+        useCasesPage:
+            "AI Use Cases by TANIR Technology - Real-World Applications and Success Stories",
+        pricingPlansPage: "Affordable AI Solutions - TANIR Technology Pricing Plans",
+        contactPage: "Contact TANIR Technology - Get in Touch with AI Experts",
+    },
 };

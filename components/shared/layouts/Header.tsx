@@ -301,7 +301,7 @@ export default function Header() {
                                 />
                             ))}
                         </ul>
-                        <div className="">
+                        <div className="w-100">
                             <LanguageSwitcher />
                         </div>
                         <div className="">

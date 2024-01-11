@@ -8,7 +8,7 @@ import ChatWidget from "@/components/usecase/ChatWidget";
 import chatScreenImage from "@/public/images/screens/screen-3.png";
 import { getusecaseData } from "@/utils/usecases";
 import Markdown from "markdown-to-jsx";
-import { Metadata } from "next";
+import { Metadata, ResolvingMetadata } from "next";
 import Image from "next/image";
 import { getDictionary } from "@/app/[lang]/dictionaries";
 
@@ -31,11 +31,11 @@ export default function UsecaseDetails({ params }: { params: { slug: string; lan
                 title={title}
                 path={[
                     {
-                        text: "Главная",
+                        text: dict.breadcrumbs.home,
                         link: "/",
                     },
                     {
-                        text: "Примеры применения",
+                        text: dict.breadcrumbs.useCases,
                         link: "/use-cases",
                     },
                     {
@@ -49,10 +49,11 @@ export default function UsecaseDetails({ params }: { params: { slug: string; lan
                     <div className="row align-center">
                         <Reveal className="col-lg-6 col-xl-5" delay={0.05}>
                             <div className="text-center text-lg-start">
-                                <h1 className="mb-4 text-white">Будьте В Курсе</h1>
+                                <h1 className="mb-4 text-white">
+                                    {dict.useCases.slug.feedbackSection.title}
+                                </h1>
                                 <p className="mb-8">
-                                    Подпишитесь на наши новостные обновления и оставайтесь впереди в
-                                    развитии AI-технологий и инноваций
+                                    {dict.useCases.slug.feedbackSection.description}
                                 </p>
                                 <div className="w-xl-3quarter">
                                     <Newsletter lang={params.lang} />

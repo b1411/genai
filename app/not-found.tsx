@@ -1,5 +1,3 @@
-import Footer from "@/components/shared/layouts/Footer";
-import Header from "@/components/shared/layouts/Header";
 import WithPaddingLayout from "@/components/shared/layouts/WithPaddingLayout";
 import notFoundImage from "@/public/images/illustrations/error-yellow.svg";
 import { Metadata } from "next";
@@ -13,7 +11,6 @@ export const metadata: Metadata = {
 export default function NotFound() {
 	return (
 		<WithPaddingLayout>
-			<Header />
 			<main className="flex-grow-1">
 				<section className="py-10 py-lg-15">
 					<div className="container">

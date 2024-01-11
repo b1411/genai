@@ -4,25 +4,23 @@ import Breadcrumb from "@/components/shared/Breadcrumb";
 import UsecaseSection from "@/components/usecase/UsecaseSection";
 import Reveal from "@/components/utils/Reveal";
 import { getDictionary } from "../../dictionaries";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-    title: "Примеры применения",
-};
+import { Metadata, ResolvingMetadata } from "next";
+import Head from "next/head";
 
 export default function UseCases({ params: { lang } }: { params: { lang: string } }) {
     const dict = getDictionary(lang).useCases;
+    const breadcrumb = getDictionary(lang).breadcrumbs;
     return (
         <main className="flex-grow-1">
             <Breadcrumb
-                title="Примеры применения"
+                title={breadcrumb.useCases}
                 path={[
                     {
-                        text: "Главная",
+                        text: breadcrumb.home,
                         link: "/",
                     },
                     {
-                        text: "Примеры применения",
+                        text: breadcrumb.useCases,
                     },
                 ]}
             />
@@ -42,7 +40,7 @@ export default function UseCases({ params: { lang } }: { params: { lang: string 
                         </div>
                     </div>
                     <div className="row justify-center row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 gx-8 gy-14">
-                        <UsecaseSection />
+                        <UsecaseSection lang={lang} />
                     </div>
                 </div>
             </section>
@@ -52,4 +50,11 @@ export default function UseCases({ params: { lang } }: { params: { lang: string 
             <CtaHome lang={lang} />
         </main>
     );
+}
+
+export async function generateMetadata({params: {lang}}: {params: {lang: string}}, parent: ResolvingMetadata): Promise<Metadata> {
+    const title = getDictionary(lang).metatagTitle.useCasesPage;
+    return {
+        title: title
+    }
 }

@@ -31,7 +31,7 @@ export default function Footer({ lang }: { lang: string }) {
 
     const dict = getDictionary(lang).footer;
 
-    const dataUsecases = getUsecasesMetadata(8);
+    const dataUsecases = getUsecasesMetadata(8, lang);
     return (
         <footer className="footer bg-striped pt-10 pt-lg-15">
             <div className="container">

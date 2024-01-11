@@ -5,42 +5,47 @@ import FeaturesSection3 from "@/components/feature/FeaturesSection3";
 import ReviewsSection from "@/components/reviews/ReviewsSection";
 import Breadcrumb from "@/components/shared/Breadcrumb";
 import TeamSection from "@/components/team/TeamSection";
-import { Metadata } from "next";
+import { Metadata, ResolvingMetadata } from "next";
 import { getDictionary } from "../../dictionaries";
 
-export const metadata: Metadata = {
-	title: "О нас",
-};
-
 export default function AboutPage({ params: { lang } }: { params: { lang: string } }) {
-	const dict = getDictionary(lang);
+    const dict = getDictionary(lang);
+    return (
+        <main className="flex-grow-1">
+            <Breadcrumb
+                title={dict.breadcrumbs.about}
+                path={[
+                    {
+                        text: dict.breadcrumbs.home,
+                        link: "/",
+                    },
+                    {
+                        text: dict.breadcrumbs.about,
+                    },
+                ]}
+            />
 
-	return (
-		<main className="flex-grow-1">
-			<Breadcrumb
-				title="О TANIR"
-				path={[
-					{
-						text: "Главная",
-						link: "/",
-					},
-					{
-						text: "О нас",
-					},
-				]}
-			/>
+            <AboutSection lang={lang} />
 
-			<AboutSection lang={lang} />
+            <FeaturesSection3 lang={lang} />
 
-			<FeaturesSection3 lang={lang} />
+            {/* <TeamSection /> */}
 
-			{/* <TeamSection /> */}
+            <ReviewsSection />
 
-			<ReviewsSection />
+            {/* <BrandLogoSection2 /> */}
 
-			{/* <BrandLogoSection2 /> */}
+            <CtaHome lang={lang} />
+        </main>
+    );
+}
 
-			<CtaHome lang={lang} />
-		</main>
-	);
+export async function generateMetadata(
+    { params: { lang } }: { params: { lang: string } },
+    parent: ResolvingMetadata,
+): Promise<Metadata> {
+    const title = getDictionary(lang).metatagTitle.aboutPage;
+    return {
+        title: title,
+    };
 }
