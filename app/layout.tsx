@@ -13,7 +13,7 @@ import { getDictionary } from "./[lang]/dictionaries";
 // export const metadata: Metadata = {
 //     title: {
 //         template: "%s",
-//         default: "TANIR - лучший сервис для автоматизации продаж",
+//         default: "QAZ.AI - лучший сервис для автоматизации продаж",
 //     },
 //     description:
 //         "Интеграция AI-сотрудников для оптимизации бизнес-процессов. Максимальная эффективность и инновационные решения от TANYR Technology. Улучшите работу вашей компании с нами!",

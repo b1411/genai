@@ -25,7 +25,12 @@ export default function LanguageSwitcher() {
     }
 
     return (
-        <select className="form-select" onChange={handleChange} value={currentLocale} title="Смена языка">
+        <select
+            className="form-select"
+            onChange={handleChange}
+            value={currentLocale}
+            title="Смена языка"
+        >
             <option value="en">English</option>
             <option value="ru">Русский</option>
         </select>

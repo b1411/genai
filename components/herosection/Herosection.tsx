@@ -29,7 +29,7 @@ export default function Herosection() {
                                     {dict.subtitle}
                                 </Reveal>
                                 <Reveal el="h1" className="text-white mb-8" delay={0.15}>
-                                    TANIR TECH <TypedText />
+                                    QAZ.AI <br /> <TypedText />
                                 </Reveal>
                                 <Reveal delay={0.3}>
                                     <Link href="/contact" className="btn btn-lg btn-gradient-1">

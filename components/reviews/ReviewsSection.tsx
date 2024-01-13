@@ -27,7 +27,7 @@ export default function ReviewsSection() {
                             <Reveal el="h1" className="text-white" delay={0.05}>
                                 <Image placeholder="blur" src={starIcon} alt="оценку" />
                                 {dict.title}{ " "}
-                                <span className="text-primary-dark">TANIR</span>
+                                <span className="text-primary-dark">QAZ.AI</span>
                             </Reveal>
                         </div>
                     </div>

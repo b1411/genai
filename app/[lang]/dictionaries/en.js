@@ -28,7 +28,7 @@ export const en = {
     },
     footer: {
         description:
-            "Contact us today and find out how TANIR Technology can be your trusted partner in the world of artificial intelligence. Together we will create the future of your business.",
+            "Contact us today and find out how QAZ.AI can be your trusted partner in the world of artificial intelligence. Together we will create the future of your business.",
         copyright: "All rights reserved",
         distribution: "News & updates",
         useCaseLinks: "Use\nCases",
@@ -44,10 +44,10 @@ export const en = {
     },
     about: {
         aboutSection: {
-            subtitle: "About TANIR",
-            title: "Meet TANIR Technology: Thinking in the Future",
+            subtitle: "About QAZ.AI",
+            title: "Meet QAZ.AI: Thinking in the Future",
             description:
-                "Learn more about TANIR Technology - a company that embodies the future in the world of artificial intelligence. Our mission, values and team of experts ready to change the business world with innovative AI solutions",
+                "Learn more about QAZ.AI - a company that embodies the future in the world of artificial intelligence. Our mission, values and team of experts ready to change the business world with innovative AI solutions",
             buttonText: "Learn more about us",
         },
         featureSection: {
@@ -61,7 +61,7 @@ export const en = {
     ctaHome: {
         title: {
             textBeforeHeghlight: "By collaborating with",
-            highlighted: "TANIR",
+            highlighted: "QAZ.AI",
             textAfterHeghlight: "you can save time and money",
         },
         buttonText: "Get in touch",
@@ -130,11 +130,11 @@ export const en = {
         contact: "Contacts",
     },
     metatagTitle: {
-        homePage: "TANIR Technology - Leading AI Integration and Innovative Solutions",
-        aboutPage: "About TANIR Technology - Expertise in AI and Tech Innovations",
+        homePage: "QAZ.AI - Leading AI Integration and Innovative Solutions",
+        aboutPage: "About QAZ.AI - Expertise in AI and Tech Innovations",
         useCasesPage:
-            "AI Use Cases by TANIR Technology - Real-World Applications and Success Stories",
-        pricingPlansPage: "Affordable AI Solutions - TANIR Technology Pricing Plans",
-        contactPage: "Contact TANIR Technology - Get in Touch with AI Experts",
+            "AI Use Cases by QAZ.AI - Real-World Applications and Success Stories",
+        pricingPlansPage: "Affordable AI Solutions - QAZ.AI Pricing Plans",
+        contactPage: "Contact QAZ.AI - Get in Touch with AI Experts",
     },
 };

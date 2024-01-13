@@ -14,7 +14,7 @@ import { getDictionary } from "@/app/[lang]/dictionaries";
 
 export function generateMetadata({ params }: { params: { slug: string; lang: string } }): Metadata {
     const { slug: slugFromUrl } = params;
-    const { title } = getusecaseData(slugFromUrl);
+    const { title } = getusecaseData(slugFromUrl, params.lang);
     return {
         title: title,
     };
@@ -23,7 +23,7 @@ export function generateMetadata({ params }: { params: { slug: string; lang: str
 export default function UsecaseDetails({ params }: { params: { slug: string; lang: string } }) {
     const { slug: slugFromUrl } = params;
     const dict = getDictionary(params.lang);
-    const { title, description, slug, content } = getusecaseData(slugFromUrl);
+    const { title, description, slug, content } = getusecaseData(slugFromUrl, params.lang);
 
     return (
         <main className="flex-grow-1">

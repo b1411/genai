@@ -17,7 +17,9 @@ export default function CtaHome({ lang }: { lang: string }) {
                     <div className="row justify-center">
                         <div className="col-lg-10">
                             <div className="text-center pt-6 px-6 pt-md-10 px-md-10 pt-lg-18 px-lg-18">
-                                <h2 className="mb-6 text-white">
+                                <h2 className="mb-6 text-white" style={{
+                                    fontSize: "1.5rem",
+                                }}>
                                     {dict.title.textBeforeHeghlight}{" "}
                                     <span className="text-primary-dark">
                                         {dict.title.highlighted}

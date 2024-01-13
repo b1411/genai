@@ -19,6 +19,6 @@ Process optimization: Algorithms help optimize production parameters to improve 
 
 #### Feedback and quality management:
 
-Based on product quality data collected in real time, neural networks can suggest adjustments to production processes to improve quality: By learning from large volumes of production data, TANIR can propose optimal adjustments or recommendations to improve production processes and product quality.
+Based on product quality data collected in real time, neural networks can suggest adjustments to production processes to improve quality: By learning from large volumes of production data, QAZ.AI can propose optimal adjustments or recommendations to improve production processes and product quality.
 
 Machine learning algorithms have enormous potential to improve quality control processes in manufacturing.

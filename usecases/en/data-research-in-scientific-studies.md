@@ -1,6 +1,6 @@
 ---
 title: "SEO content"
-description: "TANIR can be used for text generation, media content creation or design development, which can speed up the process of creating materials for marketing and communications."
+description: "QAZ.AI can be used for text generation, media content creation or design development, which can speed up the process of creating materials for marketing and communications."
 icon: "flask"
 ---
 

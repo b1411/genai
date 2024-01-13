@@ -12,7 +12,7 @@ export default function BrandLogoSection2() {
 							<Reveal el="h4" className="mb-10" delay={0.05}>
 								<span className="text-gradient-2">100+</span>
 								компаний и брендов доверяют
-								<span className="text-primary-dark"> TANIR</span>
+								<span className="text-primary-dark"> QAZ.AI</span>
 							</Reveal>
 							<div className="row align-center justify-center row-cols-3 row-cols-md-5 g-6 g-lg-10 g-xl-20">
 								{dataBrandLogos.map((brandLogo) => (
