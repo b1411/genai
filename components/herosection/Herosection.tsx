@@ -30,8 +30,10 @@ export default function Herosection() {
             const message = document.createElement("div");
             message.className = `chat-message ${direction}`;
             message.innerHTML = text;
-            messagesList?.current?.appendChild(message);
-            messagesList?.current?.scrollTo(0, messagesList?.current?.scrollHeight);
+            if (messagesList.current) {
+                messagesList.current.appendChild(message);
+                messagesList.current.scrollTo(0, messagesList?.current?.scrollHeight);
+            }
         }
 
         e.preventDefault();
@@ -65,7 +67,7 @@ export default function Herosection() {
     }
 
     const router = usePathname();
-    const messagesList = useRef(null);
+    const messagesList = useRef<HTMLDivElement>(null);
     const lang = router.split("/")[1];
     const [chatMessage, setChatMessage] = useState("");
     const [isWaitingForReply, setIsWaitingForReply] = useState(false);
