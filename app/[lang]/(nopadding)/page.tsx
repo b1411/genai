@@ -11,6 +11,7 @@ import { Metadata, ResolvingMetadata } from "next";
 import { Fragment } from "react";
 import { getDictionary } from "../dictionaries";
 
+
 export default function Home({ params: { lang } }: { params: { lang: string } }) {
     const dict = getDictionary(lang);
     return (

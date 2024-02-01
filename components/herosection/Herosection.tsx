@@ -10,10 +10,65 @@ import Reveal from "../utils/Reveal";
 import TypedText from "./TypedText";
 import { usePathname } from "next/navigation";
 import { getDictionary } from "@/app/[lang]/dictionaries";
+import { SyntheticEvent, useRef, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPaperPlane } from "@fortawesome/free-regular-svg-icons";
+import { TChatbaseData } from "@/types/chatbase";
+import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
 
 export default function Herosection() {
+    let data: TChatbaseData = {
+        messages: [],
+        chatbotId: `${process.env.NEXT_PUBLIC_CHATBOT_ID}`,
+        stream: false,
+        temperature: 0.3,
+        conversationId: "",
+    };
+    data.conversationId = `${Date.now()}`;
+    function sendMessage(e: SyntheticEvent) {
+        function addMessage(text, direction) {
+            const message = document.createElement("div");
+            message.className = `chat-message ${direction}`;
+            message.innerHTML = text;
+            messagesList?.current?.appendChild(message);
+            messagesList?.current?.scrollTo(0, messagesList?.current?.scrollHeight);
+        }
+
+        e.preventDefault();
+        setChatMessage("");
+
+        addMessage(chatMessage, "sender");
+
+        setIsWaitingForReply(true);
+
+        let message = {
+            content: chatMessage,
+            role: "user",
+        };
+        data.messages.push();
+
+        fetch("https://www.chatbase.co/api/v1/chat", {
+            method: "post",
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_KEY}`,
+            },
+            body: JSON.stringify(data),
+        })
+            .then((res) => res.json())
+            .then((res) => {
+                let reply = { content: res["text"], role: "assistant" };
+                data.messages.push();
+                addMessage(res["text"], "receiver");
+                setIsWaitingForReply(false);
+            });
+    }
+
     const router = usePathname();
+    const messagesList = useRef(null);
     const lang = router.split("/")[1];
+    const [chatMessage, setChatMessage] = useState("");
+    const [isWaitingForReply, setIsWaitingForReply] = useState(false);
     let dict = getDictionary(lang).home.herosection;
     return (
         <section
@@ -38,19 +93,54 @@ export default function Herosection() {
                                 </Reveal>
                             </div>
                             <Reveal delay={0.45}>
-                                <div className="image-with-shape">
-                                    <Image
-                                        src={shapeImage}
-                                        alt="shape"
-                                        className="shape animate-scale"
-                                    />
-                                    <div className="mt-12 rounded-5 border border-primary-dark shadow-lg overflow-hidden position-relative z-1">
-                                        <Image
-                                            placeholder="blur"
-                                            src={heroImage}
-                                            alt="hero image"
-                                            className="img-fluid d-inline-block"
-                                        />
+                                <div
+                                    style={{
+                                        width: "100%",
+                                        height: "100%",
+                                        marginTop: "50px",
+                                    }}
+                                >
+                                    <h2
+                                        style={{
+                                            marginBottom: "40px",
+                                            marginTop: "60px",
+                                        }}
+                                    >
+                                        Испытайте ИИ-сотрудника уже сейчас
+                                    </h2>
+                                    <div className="chat-container">
+                                        <div className="chat-messages" ref={messagesList}></div>
+                                        <div className="chat-input">
+                                            <form
+                                                className="input-group"
+                                                onSubmit={(e) => sendMessage(e)}
+                                            >
+                                                <div className="form-input">
+                                                    <input
+                                                        type="text"
+                                                        placeholder="Введите ваше сообщение..."
+                                                        required
+                                                        min={10}
+                                                        value={chatMessage}
+                                                        onChange={(e) =>
+                                                            setChatMessage(e.target.value)
+                                                        }
+                                                    />
+                                                    {!isWaitingForReply ? (
+                                                        <button type="submit">
+                                                            <FontAwesomeIcon icon={faPaperPlane} />
+                                                        </button>
+                                                    ) : (
+                                                        <button type="submit" disabled>
+                                                            <FontAwesomeIcon
+                                                                icon={faCircleNotch}
+                                                                className="animate-spinnner"
+                                                            />
+                                                        </button>
+                                                    )}
+                                                </div>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </Reveal>
