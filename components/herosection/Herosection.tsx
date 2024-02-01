@@ -26,7 +26,7 @@ export default function Herosection() {
     };
     data.conversationId = `${Date.now()}`;
     function sendMessage(e: SyntheticEvent) {
-        function addMessage(text, direction) {
+        function addMessage(text: string, direction: string) {
             const message = document.createElement("div");
             message.className = `chat-message ${direction}`;
             message.innerHTML = text;
