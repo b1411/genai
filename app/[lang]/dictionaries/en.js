@@ -5,6 +5,7 @@ export const en = {
             button: "Learn more",
             advantages: ["High efficiency", "Continuous work", "Minimum errors"],
             typedText: ["innovations", 1500, "efficiency", 1500, "feature", 1500],
+            chatTitle: "Try AI consultant now and see its effectiveness!",
         },
         featuresSection: {
             title: "Artificial Intelligence in Action",

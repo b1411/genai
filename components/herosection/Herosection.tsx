@@ -108,7 +108,7 @@ export default function Herosection() {
                                             marginTop: "60px",
                                         }}
                                     >
-                                        Испытайте ИИ-сотрудника уже сейчас
+                                        {dict.chatTitle}
                                     </h2>
                                     <div className="chat-container">
                                         <div className="chat-messages" ref={messagesList}></div>
