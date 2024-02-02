@@ -32,7 +32,7 @@ export default function Herosection() {
             message.innerHTML = text;
             if (messagesList.current) {
                 messagesList.current.appendChild(message);
-                messagesList.current.scrollTo(0, messagesList?.current?.scrollHeight);
+                messagesList.current.scrollTo(0, messagesList.current.scrollHeight);
             }
         }
 
@@ -47,7 +47,7 @@ export default function Herosection() {
             content: chatMessage,
             role: "user",
         };
-        data.messages.push();
+        data.messages.push(message);
 
         fetch("https://www.chatbase.co/api/v1/chat", {
             method: "post",

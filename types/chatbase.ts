@@ -1,5 +1,5 @@
 export type TChatbaseData = {
-    messages: { content: string; role: "user" | "assistant" }[];
+    messages: { content: string; role: ("user" | "assistant") | string }[];
     chatbotId: string;
     stream: Boolean;
     temperature: number;
