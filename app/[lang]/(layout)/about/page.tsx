@@ -47,5 +47,6 @@ export async function generateMetadata(
     const title = getDictionary(lang).metatagTitle.aboutPage;
     return {
         title: title,
+        description: getDictionary(lang).metatagDescription.aboutPage,
     };
 }

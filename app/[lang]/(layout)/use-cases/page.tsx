@@ -55,6 +55,7 @@ export default function UseCases({ params: { lang } }: { params: { lang: string 
 export async function generateMetadata({params: {lang}}: {params: {lang: string}}, parent: ResolvingMetadata): Promise<Metadata> {
     const title = getDictionary(lang).metatagTitle.useCasesPage;
     return {
-        title: title
+        title: title,
+        description: getDictionary(lang).metatagDescription.useCasesPage,
     }
 }

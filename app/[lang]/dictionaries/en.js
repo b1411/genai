@@ -132,9 +132,20 @@ export const en = {
     metatagTitle: {
         homePage: "QAZ.AI - Leading AI Integration and Innovative Solutions",
         aboutPage: "About QAZ.AI - Expertise in AI and Tech Innovations",
-        useCasesPage:
-            "AI Use Cases by QAZ.AI - Real-World Applications and Success Stories",
+        useCasesPage: "AI Use Cases by QAZ.AI - Real-World Applications and Success Stories",
         pricingPlansPage: "Affordable AI Solutions - QAZ.AI Pricing Plans",
         contactPage: "Contact QAZ.AI - Get in Touch with AI Experts",
+    },
+    metatagDescription: {
+        homePage:
+            "QAZ.AI - a company providing advanced AI solutions for businesses. Our AI employees will help you optimize business processes and increase efficiency.",
+        aboutPage:
+            "QAZ.AI is a company that embodies the future in the world of artificial intelligence. Our mission, values and team of experts ready to change the business world with innovative AI solutions",
+        useCasesPage:
+            "QAZ.AI offers a wide range of AI solutions for various industries. Find out how our AI employees can improve your business",
+        pricingPlansPage:
+            "Get the most out of our services with our varied and flexible plans. Solutions tailored to your business needs",
+        contactPage:
+            "Contact us today and find out how QAZ.AI can be your trusted partner in the world of artificial intelligence. Together we will create the future of your business.",
     },
 };
