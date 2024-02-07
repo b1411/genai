@@ -20,7 +20,7 @@ export default function CtaHome({ lang }: { lang: string }) {
                     </div>
                     <div className="row justify-center">
                         <div className="col-lg-10">
-                            <div className="text-center pt-6 px-6 pt-md-10 px-md-10 pt-lg-18 px-lg-18">
+                            <div className="text-center pb-6 px-6 pt-md-10 px-md-10 pt-lg-18 px-lg-18">
                                 <h2
                                     className="mb-6 text-white"
                                     style={{
@@ -67,10 +67,13 @@ export default function CtaHome({ lang }: { lang: string }) {
                                             d="M22.85 71.546c-.873 5.764-1.778 11.525-2.588 17.298-.462-.304-.922-.605-1.384-.91 2.439-1.254 4.864-2.527 7.207-3.954 2.158-1.317 4.212-3.127 6.536-4.109.733-.31 1.331.688.841 1.25-1.713 1.972-4.396 3.318-6.619 4.634-2.326 1.378-4.712 2.663-7.172 3.78-.633.287-1.294-.395-1.174-1.015 1.098-5.725 2.104-11.464 3.137-17.2.137-.79 1.337-.563 1.215.226Z"
                                         />
                                     </svg>
-                                    <div className="cta-img rounded-top-4">
+                                    <div className="cta-img rounded-top-4" style={{
+                                                aspectRatio: "4 / 3",
+                                                width: "100%",
+                                            }}>
                                         <iframe
-                                            width={560}
-                                            height={315}
+                                            width={"100%"}
+                                            height={"100%"}
                                             src="https://www.youtube.com/embed/d_WyaJMkdVA?si=azhiJLOruTSwm6Ki"
                                             title="YouTube video player"
                                             frameBorder={0}
