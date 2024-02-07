@@ -32,6 +32,7 @@ export default function RootLayout({ children, params: { lang } }: TRootLayoutPr
             <head>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <GoogleAnalytics />
+                <link rel="shortcut icon" href="/favicon.ico"/>
             </head>
             <body>
                 <RootClientLayout>
@@ -55,7 +56,7 @@ export async function generateMetadata(
     { params: { lang } }: { params: { lang: string } },
     parent: ResolvingMetadata,
 ): Promise<Metadata> {
-    return {    
+    return {
         openGraph: {
             title: "QAZ.AI - интеграция AI-сотрудников для оптимизации бизнес-процессов",
             description:
@@ -64,6 +65,6 @@ export async function generateMetadata(
             locale: lang,
             url: "https://qaz-ai.com",
             siteName: "QAZ.AI",
-        }
+        },
     };
 }
