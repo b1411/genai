@@ -15,6 +15,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-regular-svg-icons";
 import { TChatbaseData } from "@/types/chatbase";
 import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
+import { useAppContext } from "@/context/appContext";
 
 export default function Herosection() {
     let data: TChatbaseData = {
@@ -72,6 +73,9 @@ export default function Herosection() {
     const [chatMessage, setChatMessage] = useState("");
     const [isWaitingForReply, setIsWaitingForReply] = useState(false);
     let dict = getDictionary(lang).home.herosection;
+
+    const { onOpenModal } = useAppContext();
+
     return (
         <section
             className="hero-section style-1 overflow-hidden bg-dark pt-30 pb-15 pb-lg-20 pt-xl-36"
@@ -89,9 +93,15 @@ export default function Herosection() {
                                     QAZ.AI <br /> <TypedText />
                                 </Reveal>
                                 <Reveal delay={0.3}>
-                                    <Link href="/contact" className="btn btn-lg btn-gradient-1">
+                                    <button
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            onOpenModal();
+                                        }}
+                                        className="btn btn-lg btn-gradient-1"
+                                    >
                                         {dict.button}
-                                    </Link>
+                                    </button>
                                 </Reveal>
                             </div>
                             <Reveal delay={0.45}>

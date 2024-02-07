@@ -55,10 +55,15 @@ export async function generateMetadata(
     { params: { lang } }: { params: { lang: string } },
     parent: ResolvingMetadata,
 ): Promise<Metadata> {
-    const title = getDictionary(lang).metatagTitle.aboutPage;
-    return {
-        title: title,
-        description:
-            "Integration of AI employees to optimize business processes. Maximum efficiency and innovative solutions from TANYR Technology. Improve your company's performance with us!",
+    return {    
+        openGraph: {
+            title: "QAZ.AI - интеграция AI-сотрудников для оптимизации бизнес-процессов",
+            description:
+                "Интеграция AI-сотрудников для оптимизации бизнес-процессов. Максимальная эффективность и инновационные решения от TANYR Technology. Улучшите работу вашей компании с нами!",
+            type: "website",
+            locale: lang,
+            url: "https://qaz-ai.com",
+            siteName: "QAZ.AI",
+        }
     };
 }

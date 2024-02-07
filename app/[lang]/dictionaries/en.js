@@ -149,4 +149,34 @@ export const en = {
         contactPage:
             "Contact us today and find out how QAZ.AI can be your trusted partner in the world of artificial intelligence. Together we will create the future of your business.",
     },
+    modalForm: {
+        title: "Contact us",
+        description: "Fill out the form and our manager will contact you",
+        form: {
+            name: {
+                placeholder: "Name",
+                requiredError: "Name is required",
+                label: "Name",
+                patternError: "Name must contain only letters",
+            },
+            email: {
+                placeholder: "Email",
+                requiredError: "Email is required",
+                label: "Email",
+                patternError: "Email is invalid",
+            },
+            phone: {
+                placeholder: "Phone",
+                requiredError: "Phone is required",
+                label: "Phone",
+                patternError: "Phone number is invalid",
+            },
+            application: {
+                placeholder: "Message",
+                requiredError: "The message is required",
+                label: "Message",
+            },
+            submitButton: "Send",
+        },
+    },
 };

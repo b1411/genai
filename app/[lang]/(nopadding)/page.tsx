@@ -10,7 +10,8 @@ import Reveal from "@/components/utils/Reveal";
 import { Metadata, ResolvingMetadata } from "next";
 import { Fragment } from "react";
 import { getDictionary } from "../dictionaries";
-
+import ModalForm from "@/components/shared/ModalForm";
+import { useAppContext } from "@/context/appContext";
 
 export default function Home({ params: { lang } }: { params: { lang: string } }) {
     const dict = getDictionary(lang);
@@ -49,6 +50,8 @@ export default function Home({ params: { lang } }: { params: { lang: string } })
                 <PricingSection />
 
                 <FaqSection />
+
+                <ModalForm lang={lang} />
 
                 <CtaHome lang={lang} />
             </main>

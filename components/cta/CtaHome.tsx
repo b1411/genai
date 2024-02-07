@@ -1,12 +1,16 @@
+"use client";
+
 import ctaImage from "@/public/images/screens/screen-1.jpg";
 import ctaShape from "@/public/images/shapes/blurry-shape-4.svg";
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "../utils/Reveal";
 import { getDictionary } from "@/app/[lang]/dictionaries";
+import { useAppContext } from "@/context/appContext";
 
 export default function CtaHome({ lang }: { lang: string }) {
     const dict = getDictionary(lang).ctaHome;
+    const { onOpenModal } = useAppContext();
     return (
         <Reveal el="section" className="cta-section py-10 py-lg-15">
             <div className="container">
@@ -17,18 +21,24 @@ export default function CtaHome({ lang }: { lang: string }) {
                     <div className="row justify-center">
                         <div className="col-lg-10">
                             <div className="text-center pt-6 px-6 pt-md-10 px-md-10 pt-lg-18 px-lg-18">
-                                <h2 className="mb-6 text-white" style={{
-                                    fontSize: "1.5rem",
-                                }}>
+                                <h2
+                                    className="mb-6 text-white"
+                                    style={{
+                                        fontSize: "1.5rem",
+                                    }}
+                                >
                                     {dict.title.textBeforeHeghlight}{" "}
                                     <span className="text-primary-dark">
                                         {dict.title.highlighted}
                                     </span>{" "}
                                     {dict.title.textAfterHeghlight}{" "}
                                 </h2>
-                                <Link href="/login" className="btn btn-primary-dark">
+                                <button
+                                    onClick={() => onOpenModal()}
+                                    className="btn btn-primary-dark"
+                                >
                                     {dict.buttonText}
-                                </Link>
+                                </button>
                                 <div className="cta-image-container mt-10">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -58,11 +68,14 @@ export default function CtaHome({ lang }: { lang: string }) {
                                         />
                                     </svg>
                                     <div className="cta-img rounded-top-4">
-                                        <Image
-                                            placeholder="blur"
-                                            src={ctaImage}
-                                            alt="shape"
-                                            className="img-fluid w-full h-full object-cover"
+                                        <iframe
+                                            width={560}
+                                            height={315}
+                                            src="https://www.youtube.com/embed/d_WyaJMkdVA?si=azhiJLOruTSwm6Ki"
+                                            title="YouTube video player"
+                                            frameBorder={0}
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowFullScreen
                                         />
                                     </div>
                                 </div>
