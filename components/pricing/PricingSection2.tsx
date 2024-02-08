@@ -41,57 +41,57 @@ export default function PricingSection2({ lang }: { lang: string }) {
         APIUsage: {
             Light: {
                 min: 20,
-                max: 200,
+                max: 100,
             },
             Medium: {
-                min: 200,
-                max: 2000,
+                min: 100,
+                max: 400,
             },
             High: {
-                min: 2000,
-                max: 20000,
+                min: 400,
+                max: 1000,
             },
         },
         Development: {
             Light: {
-                min: 1000,
-                max: 5000,
-            },
-            Medium: {
-                min: 5000,
-                max: 20000,
-            },
-            High: {
-                min: 20000,
-                max: 100000,
-            },
-        },
-        Training: {
-            Light: {
                 min: 500,
-                max: 2000,
-            },
-            Medium: {
-                min: 2000,
-                max: 10000,
-            },
-            High: {
-                min: 10000,
-                max: 50000,
-            },
-        },
-        Support: {
-            Light: {
-                min: 100,
                 max: 1000,
             },
             Medium: {
                 min: 1000,
-                max: 5000,
+                max: 2000,
             },
             High: {
-                min: 5000,
-                max: 20000,
+                min: 2000,
+                max: 3000,
+            },
+        },
+        Training: {
+            Light: {
+                min: 100,
+                max: 150,
+            },
+            Medium: {
+                min: 150,
+                max: 200,
+            },
+            High: {
+                min: 200,
+                max: 500,
+            },
+        },
+        Support: {
+            Light: {
+                min: 50,
+                max: 100,
+            },
+            Medium: {
+                min: 100,
+                max: 500,
+            },
+            High: {
+                min: 500,
+                max: 1000,
             },
         },
     };
