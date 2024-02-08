@@ -1,14 +1,12 @@
 import CtaHome from "@/components/cta/CtaHome";
 import FaqSection from "@/components/faq/FaqSection";
-import ReviewsSection from "@/components/reviews/ReviewsSection";
 import Breadcrumb from "@/components/shared/Breadcrumb";
 import Newsletter from "@/components/utils/Newsletter";
 import Reveal from "@/components/utils/Reveal";
 import ChatWidget from "@/components/usecase/ChatWidget";
-import chatScreenImage from "@/public/images/screens/screen-3.png";
 import { getusecaseData } from "@/utils/usecases";
 import Markdown from "markdown-to-jsx";
-import { Metadata, ResolvingMetadata } from "next";
+import { Metadata } from "next";
 import Image from "next/image";
 import { getDictionary } from "@/app/[lang]/dictionaries";
 
@@ -23,7 +21,7 @@ export function generateMetadata({ params }: { params: { slug: string; lang: str
 export default function UsecaseDetails({ params }: { params: { slug: string; lang: string } }) {
     const { slug: slugFromUrl } = params;
     const dict = getDictionary(params.lang);
-    const { title, description, slug, content, image } = getusecaseData(slugFromUrl, params.lang);
+    const { title, content, image } = getusecaseData(slugFromUrl, params.lang);
 
     return (
         <main className="flex-grow-1">

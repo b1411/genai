@@ -19,9 +19,9 @@ export const en = {
             title: "Reviews from satisfied customers about",
         },
         pricingSection: {
-            subtitle: "Pricing",
-            title: ["Ready to get started?", "Don't worry, we'll fit into your budget"],
-            subtitle2: "Start today!",
+            subtitle: "Implementation stages",
+            title: ["Quick AI integration into your business", "Start today!"],
+            subtitle2: "",
         },
         faqSection: {
             title: ["Still have questions?", "We have answers!"],
@@ -80,10 +80,37 @@ export const en = {
     },
     pricingPlans: {
         pricingSection2: {
-            subtitle: "Our tariffs",
-            title: "Suitable for any business",
+            subtitle: "Flexible pricing plans",
+            title: "Calculate the cost of AI integration",
             description:
-                "Get the most out of our services with our varied and flexible plans. Solutions tailored to your business needs",
+                "Get the most out of our services with our varied and flexible plans. Solutions tailored to your business needs!",
+            calculator: {
+                APIUsage: {
+                    title: "API Usage",
+                    light: "Limited API use for basic low volume chatbot functions",
+                    medium: "Moderate API use for more complex interactions and average request volume",
+                    high: "Intensive use of APIs for high-load and complex systems with high request volume",
+                },
+                Development: {
+                    title: "Development and customization",
+                    light: "Easy integration with limited customization and basic functionality",
+                    medium: "Medium complexity with integration of multiple functions, customization to specific needs and medium level of customization",
+                    high: "High project complexity, including full integration with business processes, development of specialized modules and a high degree of customization",
+                },
+                Training: {
+                    title: "Training and testing",
+                    light: "Basic training using standard data and scenarios, minimal testing",
+                    medium: "Advanced training using specialized data, including testing and optimization",
+                    high: "Deep learning based on a large volume of specific data, comprehensive testing in various scenarios",
+                },
+                Support: {
+                    title: "Support and updates",
+                    light: "Basic support with limited updates and minimal monitoring",
+                    medium: "Professional support with regular updates, active monitoring and improvements",
+                    high: "24/7 support, constant updates and optimization, high level of customization and SLA guarantees",
+                },
+                total: "Total",
+            },
         },
     },
     contact: {

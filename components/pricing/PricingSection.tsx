@@ -1,8 +1,8 @@
 "use client";
 
-import { dataPricing, dataPricingEn } from "@/data/pricing";
+import { stepsRu, stepsEn } from "@/data/pricing";
 import Reveal from "../utils/Reveal";
-import Pricebox from "./Pricebox";
+import StepBox from "./Pricebox";
 import { usePathname } from "next/navigation";
 import { getDictionary } from "@/app/[lang]/dictionaries";
 
@@ -10,12 +10,12 @@ export default function PricingSection() {
     const lang = usePathname().split("/")[1].toString();
     let data = [];
     if (lang === "en") {
-        data = dataPricingEn;
+        data = stepsEn;
     } else {
-        data = dataPricing;
+        data = stepsRu;
     }
 
-	const dict = getDictionary(lang).home.pricingSection;
+    const dict = getDictionary(lang).home.pricingSection;
 
     return (
         <section className="py-10 py-lg-15">
@@ -36,12 +36,35 @@ export default function PricingSection() {
                         </div>
                     </div>
                 </div>
-                <div className="row g-6 pricing-table">
-                    {data.map((pricing) => (
-                        <Reveal key={pricing.id} className="col-md-6 col-lg-4" delay={0.05}>
-                            <Pricebox data={pricing} />
-                        </Reveal>
-                    ))}
+                <div className="row g-6">
+                    {data.slice(0, 3).map((item, index) => {
+                        return (
+                            <Reveal key={index} className="col-lg-4" delay={0.05 * index}>
+                                <div>
+                                    <StepBox
+                                        title={item.title}
+                                        text={item.description}
+                                        stepNumber={item.id}
+                                    />
+                                </div>
+                            </Reveal>
+                        );
+                    })}
+                </div>
+                <div className="row g-6 mt-8">
+                    {data.slice(3).map((item, index) => {
+                        return (
+                            <Reveal key={index} className="col-lg-4" delay={0.05 * index}>
+                                <div>
+                                    <StepBox
+                                        title={item.title}
+                                        text={item.description}
+                                        stepNumber={item.id}
+                                    />
+                                </div>
+                            </Reveal>
+                        );
+                    })}
                 </div>
             </div>
         </section>

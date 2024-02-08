@@ -1,6 +1,5 @@
 "use client";
 
-import { dataPricing6 as dataPricing, dataPricingEn6 } from "@/data/pricing";
 import { TPricing, TPricingPlanType } from "@/types/pricing";
 import { ChangeEvent, SyntheticEvent, useEffect, useState } from "react";
 import Reveal from "../utils/Reveal";
@@ -8,18 +7,12 @@ import Pricebox from "./Pricebox";
 import { getDictionary } from "@/app/[lang]/dictionaries";
 
 export default function PricingSection2({ lang }: { lang: string }) {
-    const [pricintPlanType, setPricintPlanType] = useState<TPricingPlanType>("monthly");
-    const [visibleData, setVisibleData] = useState<TPricing[]>([]);
-    const [totalPrice, setTotalPrice] = useState<{ min: number; max: number }>({ min: 0, max: 0 });
     const [selections, setSelections] = useState<Record<string, string>>({
         APIUsage: "Light",
         Development: "Light",
         Training: "Light",
         Support: "Light",
     });
-
-    let data: TPricing[] = [];
-    lang === "ru" ? (data = dataPricing) : (data = dataPricingEn6);
 
     const prices: Record<
         string,
@@ -139,7 +132,7 @@ export default function PricingSection2({ lang }: { lang: string }) {
                     <div className="col-lg-12">
                         <div className="justify-center gap-4 row mb-4">
                             <div className="col-lg-5 border border-primary rounded p-4">
-                                <h3>Использование AI API</h3>
+                                <h3>{dict.pricingSection2.calculator.APIUsage.title}</h3>
                                 <div>
                                     <div className="form-check">
                                         <input
@@ -151,8 +144,7 @@ export default function PricingSection2({ lang }: { lang: string }) {
                                             onChange={handleChange}
                                         />
                                         <label htmlFor="APIUsageLight" className="form-check-label">
-                                            Ограниченное использование API для базовых функций
-                                            чат-бота с низким объемом запросов
+                                            {dict.pricingSection2.calculator.APIUsage.light}
                                         </label>
                                     </div>
                                     <div className="form-check">
@@ -168,8 +160,7 @@ export default function PricingSection2({ lang }: { lang: string }) {
                                             htmlFor="APIUsageMedium"
                                             className="form-check-label"
                                         >
-                                            Умеренное использование API для более сложных
-                                            взаимодействий и среднего объема запросов
+                                            {dict.pricingSection2.calculator.APIUsage.medium}
                                         </label>
                                     </div>
                                     <div className="form-check">
@@ -182,14 +173,13 @@ export default function PricingSection2({ lang }: { lang: string }) {
                                             onChange={handleChange}
                                         />
                                         <label htmlFor="APIUsageHigh" className="form-check-label">
-                                            Интенсивное использование API для высоконагруженных и
-                                            сложных систем с высоким объемом запросов
+                                            {dict.pricingSection2.calculator.APIUsage.high}
                                         </label>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-lg-5 border border-primary rounded p-4">
-                                <h3>Разработка и настройка</h3>
+                                <h3>{dict.pricingSection2.calculator.Development.title}</h3>
                                 <div>
                                     <div className="form-check">
                                         <input
@@ -204,8 +194,7 @@ export default function PricingSection2({ lang }: { lang: string }) {
                                             htmlFor="DevelopmentLight"
                                             className="form-check-label"
                                         >
-                                            Простая интеграция с ограниченной настройкой и базовым
-                                            набором функций
+                                            {dict.pricingSection2.calculator.Development.light}
                                         </label>
                                     </div>
                                     <div className="form-check">
@@ -221,9 +210,7 @@ export default function PricingSection2({ lang }: { lang: string }) {
                                             htmlFor="DevelopmentMedium"
                                             className="form-check-label"
                                         >
-                                            Средняя сложность с интеграцией нескольких функций,
-                                            настройкой под специфические потребности и средним
-                                            уровнем кастомизации
+                                            {dict.pricingSection2.calculator.Development.medium}
                                         </label>
                                     </div>
                                     <div className="form-check">
@@ -239,9 +226,7 @@ export default function PricingSection2({ lang }: { lang: string }) {
                                             htmlFor="DevelopmentHigh"
                                             className="form-check-label"
                                         >
-                                            Высокая сложность проекта, включая полную интеграцию с
-                                            бизнес-процессами, разработку специализированных модулей
-                                            и высокую степень кастомизации
+                                            {dict.pricingSection2.calculator.Development.high}
                                         </label>
                                     </div>
                                 </div>
@@ -249,7 +234,7 @@ export default function PricingSection2({ lang }: { lang: string }) {
                         </div>
                         <div className="row justify-center gap-4 ">
                             <div className="col-lg-5 border border-primary rounded p-4">
-                                <h3>Обучение и тестирование</h3>
+                                <h3>{dict.pricingSection2.calculator.Training.title}</h3>
                                 <div>
                                     <div className="form-check">
                                         <input
@@ -261,8 +246,7 @@ export default function PricingSection2({ lang }: { lang: string }) {
                                             onChange={handleChange}
                                         />
                                         <label htmlFor="TrainingLight" className="form-check-label">
-                                            Основное обучение с использованием стандартных данных и
-                                            сценариев, минимальное тестирование
+                                            {dict.pricingSection2.calculator.Training.light}
                                         </label>
                                     </div>
                                     <div className="form-check">
@@ -278,8 +262,7 @@ export default function PricingSection2({ lang }: { lang: string }) {
                                             htmlFor="TrainingMedium"
                                             className="form-check-label"
                                         >
-                                            Расширенное обучение с использованием специализированных
-                                            данных, включая тестирование и оптимизацию
+                                            {dict.pricingSection2.calculator.Training.medium}
                                         </label>
                                     </div>
                                     <div className="form-check">
@@ -292,15 +275,13 @@ export default function PricingSection2({ lang }: { lang: string }) {
                                             onChange={handleChange}
                                         />
                                         <label htmlFor="TrainingHigh" className="form-check-label">
-                                            Глубокое обучение на основе большого объема
-                                            специфических данных, комплексное тестирование в
-                                            различных сценариях
+                                            {dict.pricingSection2.calculator.Training.high}
                                         </label>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-lg-5 border border-primary rounded p-4">
-                                <h3>Поддержка и обновления</h3>
+                                <h3>{dict.pricingSection2.calculator.Support.title}</h3>
                                 <div>
                                     <div className="form-check">
                                         <input
@@ -312,8 +293,7 @@ export default function PricingSection2({ lang }: { lang: string }) {
                                             onChange={handleChange}
                                         />
                                         <label htmlFor="SupportLight" className="form-check-label">
-                                            Базовая поддержка с ограниченными обновлениями и
-                                            минимальным мониторингом
+                                            {dict.pricingSection2.calculator.Support.light}
                                         </label>
                                     </div>
                                     <div className="form-check">
@@ -326,8 +306,7 @@ export default function PricingSection2({ lang }: { lang: string }) {
                                             onChange={handleChange}
                                         />
                                         <label htmlFor="SupportMedium" className="form-check-label">
-                                            Профессиональная поддержка с регулярными обновлениями,
-                                            активным мониторингом и улучшениями
+                                            {dict.pricingSection2.calculator.Support.medium}
                                         </label>
                                     </div>
                                     <div className="form-check">
@@ -340,9 +319,7 @@ export default function PricingSection2({ lang }: { lang: string }) {
                                             onChange={handleChange}
                                         />
                                         <label htmlFor="SupportHigh" className="form-check-label">
-                                            Круглосуточная поддержка, постоянные обновления и
-                                            оптимизация, высокий уровень настраиваемости и гарантии
-                                            SLA
+                                            {dict.pricingSection2.calculator.Support.high}
                                         </label>
                                     </div>
                                 </div>
@@ -355,11 +332,15 @@ export default function PricingSection2({ lang }: { lang: string }) {
                                             fontSize: "1.5rem",
                                         }}
                                     >
-                                        Общая стоимость:
+                                        {dict.pricingSection2.calculator.total}:
                                     </span>{" "}
-                                    <span style={{
-                                        fontSize: "1.5rem",
-                                    }}>{`${min} ~ ${max}`} $</span>
+                                    <span
+                                        style={{
+                                            fontSize: "1.5rem",
+                                        }}
+                                    >
+                                        {`${min} ~ ${max}`} $
+                                    </span>
                                 </div>
                             </div>
                         </div>
