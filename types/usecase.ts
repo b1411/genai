@@ -7,6 +7,7 @@ export type TUsecaseMetadata = {
 	description: string;
 	icon: string;
 	slug: string;
+	image: string;
 };
 
 export type TUsecaseData = TUsecaseMetadata & {

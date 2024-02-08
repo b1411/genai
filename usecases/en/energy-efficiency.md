@@ -2,6 +2,7 @@
 title: "Demand Forecasting"
 description: "AI can analyze data about past sales, weather, events and other factors to predict demand for goods or services, which helps optimize inventory and production."
 icon: "lightbulb"
+image: "demand-forecasting.jpg"
 ---
 
 # Historical sales data:

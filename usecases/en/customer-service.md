@@ -2,6 +2,7 @@
 title: "Customer Service"
 description: "Improve your customer experience with our AI chatbots, available 24/7. Contact us for personalized help!"
 icon: "headset"
+image: "customer-service.jpg"
 ---
 
 # The role of QAZ.AI and virtual assistants in customer service

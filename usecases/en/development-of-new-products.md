@@ -2,6 +2,7 @@
 title: "Development of new products"
 description: "Use AI to accelerate new product development processes. The innovation you expect!"
 icon: "cogs"
+image: "development-of-new-products.jpg"
 ---
 
 # QAZ.AI as a productivity tool

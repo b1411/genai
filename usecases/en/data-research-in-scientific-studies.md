@@ -2,6 +2,7 @@
 title: "SEO content"
 description: "QAZ.AI can be used for text generation, media content creation or design development, which can speed up the process of creating materials for marketing and communications."
 icon: "flask"
+image: "seo-content.jpg"
 ---
 
 # Create high quality content:

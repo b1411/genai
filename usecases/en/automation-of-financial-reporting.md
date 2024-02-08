@@ -2,6 +2,7 @@
 title: "Automation of financial reporting"
 description: "Speed up your financial reporting processes with our AI staff. Accuracy and speed in one package!"
 icon: "chart-bar"
+image: "automation-of-financial-reporting.jpg"
 ---
 
 # Automatic update of reports:

@@ -2,6 +2,7 @@
 title: "Quality Control"
 description: "Machine learning algorithms can help automatically control product quality, identify defects and optimize production processes."
 icon: "cubes"
+image: "quality-control.jpg"
 ---
 
 # Automatic product quality control

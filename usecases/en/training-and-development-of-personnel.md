@@ -2,6 +2,7 @@
 title: "Staff training and development"
 description: "Create personalized educational courses with our AI trainers. Upskill your staff!"
 icon: "graduation-cap"
+image: "staff-training.jpg"
 ---
 
 # Process optimization and training

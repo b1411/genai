@@ -7,7 +7,7 @@ const FOLDER_PATH = path.join(process.cwd(), "usecases");
 
 export const getUsecasesMetadata = (limit: number = 0, lang: string = "ru"): TUsecaseMetadata[] => {
     const files = fs.readdirSync(`${FOLDER_PATH}/${lang}`);
-    const markdownPosts = files.filter((file) => file.endsWith(".md"))
+    const markdownPosts = files.filter((file) => file.endsWith(".md"));
 
     const posts = markdownPosts.map((fileName) => {
         const fileContents = fs.readFileSync(path.join(FOLDER_PATH, lang, fileName), "utf-8");
@@ -17,6 +17,7 @@ export const getUsecasesMetadata = (limit: number = 0, lang: string = "ru"): TUs
             title: postMeta.title,
             description: postMeta.description,
             icon: postMeta.icon,
+            image: postMeta.image,
             slug: fileName.replace(".md", ""),
         };
     });
@@ -36,6 +37,7 @@ export const getusecaseData = (slug: string, lang: string): TUsecaseData => {
         title: postMeta.title,
         description: postMeta.description,
         icon: postMeta.icon,
+        image: postMeta.image,
         slug: slug,
         content: postContent,
     };

@@ -23,7 +23,7 @@ export function generateMetadata({ params }: { params: { slug: string; lang: str
 export default function UsecaseDetails({ params }: { params: { slug: string; lang: string } }) {
     const { slug: slugFromUrl } = params;
     const dict = getDictionary(params.lang);
-    const { title, description, slug, content } = getusecaseData(slugFromUrl, params.lang);
+    const { title, description, slug, content, image } = getusecaseData(slugFromUrl, params.lang);
 
     return (
         <main className="flex-grow-1">
@@ -64,7 +64,7 @@ export default function UsecaseDetails({ params }: { params: { slug: string; lan
                             <div className="text-center">
                                 <Image
                                     placeholder="blur"
-                                    src={chatScreenImage}
+                                    src={require(`@/public/images/usecases/${image}`)}
                                     alt="image"
                                     className="img-fluid d-inline-block"
                                 />

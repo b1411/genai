@@ -2,6 +2,7 @@
 title: "Data Analysis for Marketing"
 description: "Get valuable insights from text and data using AI analysis. Maximize your marketing strategy!"
 icon: "chart-line"
+image: "data-analysis-for-marketing.jpg"
 ---
 
 # Data collection and processing

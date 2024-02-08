@@ -2,6 +2,8 @@ import { dataContactInfo, dataContactInfoEn } from "@/data/contact";
 import React from "react";
 import Reveal from "../utils/Reveal";
 import ContactForm from "./ContactForm";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 export default function ContactSection({ lang }: { lang: string }) {
     const data = lang === "en" ? dataContactInfoEn : dataContactInfo;
@@ -23,12 +25,19 @@ export default function ContactSection({ lang }: { lang: string }) {
                             <Reveal className="col" delay={0.1}>
                                 <div className="text-center">
                                     <div className="icon w-18 h-18 rounded-3 p-4 d-inline-flex align-center justify-center bg-primary-dark text-dark mb-8">
-                                        <i className="ti ti-phone-call fs-2"></i>
+                                        <FontAwesomeIcon icon={faWhatsapp} className="fs-2" />
                                     </div>
                                     <h3 className="fw-medium mb-0">
                                         {data.phone.map((item) => (
                                             <React.Fragment key={item}>
-                                                <span>{item}</span>
+                                                <a
+                                                    href={`https://wa.me/${item
+                                                        .replaceAll(" ", "")
+                                                        .replaceAll("(", "")
+                                                        .replaceAll(")", "")}`}
+                                                >
+                                                    {item}
+                                                </a>
                                                 <br />
                                             </React.Fragment>
                                         ))}
