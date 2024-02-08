@@ -61,7 +61,7 @@ export default function UsecaseDetails({ params }: { params: { slug: string; lan
                             </div>
                         </Reveal>
                         <Reveal className="col-lg-6 offset-xl-1" delay={0.1}>
-                            <div className="text-center">
+                            <div className="text-center rounded">
                                 <Image
                                     placeholder="blur"
                                     src={require(`@/public/images/usecases/${image}`)}

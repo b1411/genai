@@ -49,14 +49,11 @@ export default function ContactSection({ lang }: { lang: string }) {
                 </div>
                 <Reveal className="ratio ratio-16x9 rounded-4 overflow-hidden mt-18" delay={0.15}>
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2906.4392935811225!2d76.94742947603702!3d43.24221427112448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836ee584fe528b%3A0xcb1413802f5325fb!2z0KPQvdC40LLQtdGA0YHQuNGC0LXRgiDQnNC10LbQtNGD0L3QsNGA0L7QtNC90L7Qs9C-INCR0LjQt9C90LXRgdCw!5e0!3m2!1sru!2skz!4v1704736970731!5m2!1sru!2skz"
-                        width={600}
-                        height={450}
-                        style={{ border: 0 }}
-                        allowFullScreen={true}
-                        loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"
-                    />
+                        src="https://yandex.ru/map-widget/v1/?um=constructor%3A9d55ed2c13165155ea2b999eadfa02deb1e8a52ea89dfd8b00e0063c3aed0112&amp;source=constructor"
+                        width="600"
+                        height="450"
+                        frameBorder="0"
+                    ></iframe>
                 </Reveal>
                 <Reveal className="row justify-center mt-18" delay={0.05}>
                     <div className="col-lg-8 col-xl-6">
