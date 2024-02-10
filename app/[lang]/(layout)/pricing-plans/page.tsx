@@ -33,10 +33,20 @@ export default function PricingPlans({ params: { lang } }: { params: { lang: str
     );
 }
 
-export async function generateMetadata({params: {lang}}: {params: {lang: string}}, parent: ResolvingMetadata): Promise<Metadata> {
+export async function generateMetadata(
+    { params: { lang } }: { params: { lang: string } },
+    parent: ResolvingMetadata,
+): Promise<Metadata> {
     const title = getDictionary(lang).metatagTitle.pricingPlansPage;
     return {
         title: title,
         description: getDictionary(lang).metatagDescription.pricingPlansPage,
-    }
+        alternates: {
+            canonical: "https://qaz-ai.com/pricing-plans",
+            languages: {
+                ru: "https://qaz-ai.com/ru/pricing-plans",
+                en: "https://qaz-ai.com/en/pricing-plans",
+            },
+        },
+    };
 }

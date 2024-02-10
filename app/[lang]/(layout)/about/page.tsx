@@ -48,5 +48,12 @@ export async function generateMetadata(
     return {
         title: title,
         description: getDictionary(lang).metatagDescription.aboutPage,
+        alternates: {
+            canonical: "https://qaz-ai.com/about",
+            languages: {
+                ru: "https://qaz-ai.com/ru/about",
+                en: "https://qaz-ai.com/en/about",
+            },
+        },
     };
 }

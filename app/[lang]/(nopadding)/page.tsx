@@ -26,8 +26,6 @@ export default function Home({ params: { lang } }: { params: { lang: string } })
 
                 <BlockFeatureSection />
 
-                
-
                 {/* Use cases section */}
                 <section className="bg-striped bg-striped-sm bg-striped-bottom bg-dark-blue-4 py-20 py-lg-30">
                     <div className="container">
@@ -55,8 +53,6 @@ export default function Home({ params: { lang } }: { params: { lang: string } })
 
                 <FaqSection />
 
-                
-
                 <ModalForm lang={lang} />
 
                 <CtaHome lang={lang} />
@@ -73,5 +69,12 @@ export async function generateMetadata(
     return {
         title: title,
         description: getDictionary(lang).metatagDescription.homePage,
+        alternates: {
+            canonical: "https://qaz-ai.com",
+            languages: {
+                'en': 'https://qaz-ai.com/en/',
+                'ru': 'https://qaz-ai.com/ru/',
+            }
+        }
     };
 }

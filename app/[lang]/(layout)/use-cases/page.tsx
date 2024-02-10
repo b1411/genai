@@ -52,10 +52,20 @@ export default function UseCases({ params: { lang } }: { params: { lang: string 
     );
 }
 
-export async function generateMetadata({params: {lang}}: {params: {lang: string}}, parent: ResolvingMetadata): Promise<Metadata> {
+export async function generateMetadata(
+    { params: { lang } }: { params: { lang: string } },
+    parent: ResolvingMetadata,
+): Promise<Metadata> {
     const title = getDictionary(lang).metatagTitle.useCasesPage;
     return {
         title: title,
         description: getDictionary(lang).metatagDescription.useCasesPage,
-    }
+        alternates: {
+            canonical: "https://qaz-ai.com/use-cases",
+            languages: {
+                ru: "https://qaz-ai.com/ru/use-cases",
+                en: "https://qaz-ai.com/en/use-cases",
+            },
+        },
+    };
 }
