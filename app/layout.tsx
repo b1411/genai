@@ -23,7 +23,7 @@ export default function RootLayout({ children, params: { lang } }: TRootLayoutPr
             <head>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <GoogleAnalytics />
-                <link rel="shortcut icon" href="/favicon.ico"/>
+                <link rel="shortcut icon" href="/favicon.ico" />
             </head>
             <body>
                 <RootClientLayout>
@@ -56,6 +56,18 @@ export async function generateMetadata(
             locale: lang,
             url: "https://qaz-ai.com",
             siteName: "QAZ.AI",
+            images: [
+                {
+                    url: "https://www.qaz-ai.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.81116f64.png&w=64&q=75",
+                    width: 64,
+                    height: 64,
+                },
+            ],
+        },
+        icons: {
+            icon: "/favicon.ico",
+            shortcut: "/favicon.ico",
+            apple: "/favicon.ico",
         },
     };
 }

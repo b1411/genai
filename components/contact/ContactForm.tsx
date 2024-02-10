@@ -31,7 +31,7 @@ export default function ContactForm({ lang }: { lang: string }) {
         newRequest.set("message", message);
         try {
             await newRequest.save();
-            toast.success(`Ваше сообщение отправлено`);
+            toast.success(`Мы скоро свяжемся с вами`);
         } catch (error: any) {
             if (error.code === 137) {
                 toast.error(`Вы уже отправляли сообщение`);
@@ -59,7 +59,7 @@ export default function ContactForm({ lang }: { lang: string }) {
                                 message: dict.form.name.requiredError,
                             },
                             pattern: {
-                                value: /^[a-zA-Zа-яА-Я]+$/,
+                                value: /^[A-ZА-Я][a-zа-я]+ [A-ZА-Я][a-zа-я]+$/,
                                 message: dict.form.name.patternError,
                             },
                         })}

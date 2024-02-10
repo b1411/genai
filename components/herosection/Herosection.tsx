@@ -130,7 +130,7 @@ export default function Herosection() {
                                                 <div className="form-input">
                                                     <input
                                                         type="text"
-                                                        placeholder="Введите ваше сообщение..."
+                                                        placeholder={lang === "en" ? "Type a message..." : "Введите сообщение..."}
                                                         required
                                                         min={10}
                                                         value={chatMessage}

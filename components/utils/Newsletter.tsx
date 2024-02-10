@@ -2,6 +2,7 @@
 
 import { getDictionary } from "@/app/[lang]/dictionaries";
 import { useForm } from "react-hook-form";
+import { sendMail } from "@/api/sendForm";
 
 type TNewsletterProps = {
     textButton?: boolean;
@@ -20,8 +21,8 @@ export default function Newsletter({ textButton = false, lang }: TNewsletterProp
         formState: { errors },
     } = useForm<TFormData>();
 
-    const onSubmit = (data: TFormData) => {
-        console.log(data);
+    const onSubmit = async (data: TFormData) => {
+        await sendMail(data.email);
     };
 
     return (
