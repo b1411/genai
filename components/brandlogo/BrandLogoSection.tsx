@@ -1,24 +1,75 @@
-import { dataBrandLogos } from "@/data/brandlogos";
-import Reveal from "../utils/Reveal";
-import BrandLogo from "./BrandLogo";
+"use client";
+
+import Image from "next/image";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 export default function BrandLogoSection() {
-	return (
-		<div className="row justify-center">
-			<div className="col-lg-10">
-				<div className="text-center">
-					<Reveal el="h4" className="mb-10" delay={0.05}>
-						<span className="text-gradient-2">20,000+</span>
-						Professionals & Teams Choose{" "}
-						<span className="text-primary-dark">GenAI.</span>
-					</Reveal>
-					<div className="row align-center justify-center row-cols-3 row-cols-md-5 g-6 g-lg-10 g-xl-20">
-						{dataBrandLogos.map((brandLogo) => (
-							<BrandLogo key={brandLogo.id} data={brandLogo} />
-						))}
-					</div>
-				</div>
-			</div>
-		</div>
-	);
+    let indices = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+    // Стили для слайдера
+    const settings = {
+        dots: false,
+        arrows: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 5,
+        slidestoScroll: 2,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 2,
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                },
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
+    };
+
+    return (
+        <div className="mx-auto">
+            <div className="container">
+                <Slider {...settings}>
+                    {indices.map((el, index) => {
+                        return (
+                            <div
+                                key={index}
+                                style={{
+                                    border: "none",
+                                    outline: "none",
+                                }}
+                            >
+                                <Image
+                                    alt="brand"
+                                    src={`/images/brands/${el}.png`}
+                                    width={200}
+                                    height={200}
+                                    className="img-fluid brand-img mx-auto"
+                                    style={{
+                                        border: "none",
+                                        outline: "none",
+                                    }}
+                                />
+                            </div>
+                        );
+                    })}
+                </Slider>
+            </div>
+        </div>
+    );
 }

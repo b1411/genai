@@ -7,7 +7,9 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { SyntheticEvent, useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
-import LanguageSwitcher from "@/components/utils/LanguageSwitcher"
+import LanguageSwitcher from "@/components/utils/LanguageSwitcher";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWhatsapp, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 type TNavItem = {
     id: number;
@@ -226,8 +228,8 @@ const navbarLinksEn: TNavItem[] = [
 
 export default function Header() {
     const headerRef = useRef<HTMLElement>(null);
-	const lang = usePathname().split("/")[1].toString();
-	const data = lang === "en" ? navbarLinksEn : navbarLinks;
+    const lang = usePathname().split("/")[1].toString();
+    const data = lang === "en" ? navbarLinksEn : navbarLinks;
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isSticky, setIsSticky] = useState(false);
     const [activeDropdownId, setActiveDropdownId] = useState(0);
@@ -261,58 +263,61 @@ export default function Header() {
     }, []);
 
     return (
-        <nav
-            className={classNames("navbar navbar-expand-lg fixed-top", {
-                "bg-dark": isMenuOpen,
-                "headroom--pinned bg-dark": isSticky,
-            })}
-            ref={headerRef}
-            data-bs-theme="dark"
-        >
-            <div className="container">
-                <Link href="/" className="navbar-brand">
-                    <Image src={headerBlueLogo} alt="GenAi" height={60} priority />
-                </Link>
-                <button
-                    className="navbar-toggler"
-                    type="button"
-                    onClick={() => setIsMenuOpen((prev) => !prev)}
-                >
-                    <div className="navbar-toggler-icon">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </button>
-                <div
-                    className={classNames("collapse navbar-collapse", {
-                        show: isMenuOpen,
-                    })}
-                >
-                    <div className="navbar-content-inner ms-lg-auto d-flex flex-column flex-lg-row align-lg-center gap-4 gap-lg-10 p-2 p-lg-0">
-                        <ul className="navbar-nav gap-lg-2 gap-xl-5">
-                            {data.map((navLink) => (
-                                <NavbarLinkItem
-                                    key={navLink.id}
-                                    data={navLink}
-                                    activeDropdownId={activeDropdownId}
-                                    setActiveDropdownId={setActiveDropdownId}
-                                    collapseMenu={() => setIsMenuOpen(false)}
-                                />
-                            ))}
-                        </ul>
-                        <div className="w-100">
-                            <LanguageSwitcher />
+        <>
+            <nav
+                className={classNames("navbar navbar-expand-lg fixed-top", {
+                    "bg-dark": isMenuOpen,
+                    "headroom--pinned bg-dark": isSticky,
+                })}
+                ref={headerRef}
+                data-bs-theme="dark"
+            >
+                {" "}
+                <div className="container">
+                    <Link href="/" className="navbar-brand">
+                        <Image src={headerBlueLogo} alt="GenAi" height={60} priority />
+                    </Link>
+                    <button
+                        className="navbar-toggler"
+                        type="button"
+                        onClick={() => setIsMenuOpen((prev) => !prev)}
+                    >
+                        <div className="navbar-toggler-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
                         </div>
-                        <div className="">
-                            <Link href="/contact" className="btn btn-outline-primary-dark">
-                                {lang === "en" ? "Contact us" : "Связаться с нами"}
-                            </Link>
+                    </button>
+                    <div
+                        className={classNames("collapse navbar-collapse", {
+                            show: isMenuOpen,
+                        })}
+                    >
+                        <div className="navbar-content-inner ms-lg-auto d-flex flex-column flex-lg-row align-lg-center gap-4 gap-lg-10 p-2 p-lg-0">
+                            <ul className="navbar-nav gap-lg-2 gap-xl-5">
+                                {data.map((navLink) => (
+                                    <NavbarLinkItem
+                                        key={navLink.id}
+                                        data={navLink}
+                                        activeDropdownId={activeDropdownId}
+                                        setActiveDropdownId={setActiveDropdownId}
+                                        collapseMenu={() => setIsMenuOpen(false)}
+                                    />
+                                ))}
+                            </ul>
+                            <div className="w-100">
+                                <LanguageSwitcher />
+                            </div>
+                            <div className="">
+                                <Link href="/contact" className="btn btn-outline-primary-dark">
+                                    {lang === "en" ? "Contact us" : "Связаться с нами"}
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </>
     );
 }
 

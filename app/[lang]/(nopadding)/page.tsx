@@ -12,6 +12,7 @@ import { Fragment } from "react";
 import { getDictionary } from "../dictionaries";
 import ModalForm from "@/components/shared/ModalForm";
 import { useAppContext } from "@/context/appContext";
+import BrandLogoSection from "@/components/brandlogo/BrandLogoSection";
 
 export default function Home({ params: { lang } }: { params: { lang: string } }) {
     const dict = getDictionary(lang);
@@ -21,8 +22,11 @@ export default function Home({ params: { lang } }: { params: { lang: string } })
                 <Herosection />
 
                 <FeaturesSection lang={lang} />
+                <BrandLogoSection />
 
                 <BlockFeatureSection />
+
+                
 
                 {/* Use cases section */}
                 <section className="bg-striped bg-striped-sm bg-striped-bottom bg-dark-blue-4 py-20 py-lg-30">
@@ -50,6 +54,8 @@ export default function Home({ params: { lang } }: { params: { lang: string } })
                 <PricingSection />
 
                 <FaqSection />
+
+                
 
                 <ModalForm lang={lang} />
 
