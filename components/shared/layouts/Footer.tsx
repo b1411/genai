@@ -181,7 +181,7 @@ export default function Footer({ lang }: { lang: string }) {
                                     placeholder="blur"
                                     src={footerLogo}
                                     alt="GenAi"
-                                    height={80}
+                                    height={30}
                                     priority
                                 />
                             </Link>

@@ -57,16 +57,16 @@ export async function generateMetadata(
             siteName: "QAZ.AI",
             images: [
                 {
-                    url: "https://www.qaz-ai.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.f3b68649.png&w=256&q=75",
+                    url: "https://i.ibb.co.com/q52YvT1/photo-2024-02-13-11-09-12.jpg",
                     width: 64,
                     height: 64,
                 },
             ],
         },
         icons: {
-            icon: "https://www.qaz-ai.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.f3b68649.png&w=256&q=75",
-            shortcut: "https://www.qaz-ai.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.f3b68649.png&w=256&q=75",
-            apple: "https://www.qaz-ai.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.f3b68649.png&w=256&q=75",
+            icon: "https://i.ibb.co.com/LJsdwpb/favicon.png",
+            shortcut: "https://i.ibb.co.com/LJsdwpb/favicon.png",
+            apple: "https://i.ibb.co.com/LJsdwpb/favicon.png",
         },
     };
 }
