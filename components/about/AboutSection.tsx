@@ -17,9 +17,17 @@ export default function AboutSection({ lang }: { lang: string }) {
                             <p className="text-primary-dark fs-sm">{dict.aboutSection.subtitle}</p>
                             <h2 className="mb-4 text-white">{dict.aboutSection.title}</h2>
                             <p className="mb-8">{dict.aboutSection.description}</p>
-                            <Link href="/login" className="btn btn-lg btn-gradient-1">
+                            <h4
+                                style={{
+                                    textTransform: "uppercase",
+                                    background:
+                                        "linear-gradient(92.73deg, #b324d7 7.07%, #fe577f 97.81%)",
+                                    backgroundClip: "text",
+                                    WebkitTextFillColor: "transparent",
+                                }}
+                            >
                                 {dict.aboutSection.buttonText}
-                            </Link>
+                            </h4>
                         </div>
                     </Reveal>
                     <Reveal className="col-lg-6 offset-xl-1" delay={0.1}>

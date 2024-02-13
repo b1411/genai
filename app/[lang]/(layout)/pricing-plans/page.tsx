@@ -5,6 +5,7 @@ import Breadcrumb from "@/components/shared/Breadcrumb";
 import { Metadata, ResolvingMetadata } from "next";
 import { getDictionary } from "../../dictionaries";
 import Head from "next/head";
+import ModalForm from "@/components/shared/ModalForm";
 
 export default function PricingPlans({ params: { lang } }: { params: { lang: string } }) {
     const dict = getDictionary(lang);
@@ -29,6 +30,8 @@ export default function PricingPlans({ params: { lang } }: { params: { lang: str
             <FaqSection />
 
             <CtaHome lang={lang} />
+            
+            <ModalForm lang={lang} />
         </main>
     );
 }

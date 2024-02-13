@@ -3,6 +3,7 @@ import CtaHome from "@/components/cta/CtaHome";
 import Breadcrumb from "@/components/shared/Breadcrumb";
 import { Metadata, ResolvingMetadata } from "next";
 import { getDictionary } from "../../dictionaries";
+import ModalForm from "@/components/shared/ModalForm";
 
 export default function ContactPage({ params: { lang } }: { params: { lang: string } }) {
     const dict = getDictionary(lang);
@@ -25,6 +26,8 @@ export default function ContactPage({ params: { lang } }: { params: { lang: stri
             <ContactSection lang={lang} />
 
             <CtaHome lang={lang} />
+
+            <ModalForm lang={lang} />
         </main>
     );
 }

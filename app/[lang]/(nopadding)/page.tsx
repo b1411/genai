@@ -70,7 +70,7 @@ export async function generateMetadata(
         title: title,
         description: getDictionary(lang).metatagDescription.homePage,
         alternates: {
-            canonical: "https://qaz-ai.com",
+            canonical: "https://qaz-ai.com/",
             languages: {
                 'en': 'https://qaz-ai.com/en/',
                 'ru': 'https://qaz-ai.com/ru/',

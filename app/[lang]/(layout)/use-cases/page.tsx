@@ -6,6 +6,8 @@ import Reveal from "@/components/utils/Reveal";
 import { getDictionary } from "../../dictionaries";
 import { Metadata, ResolvingMetadata } from "next";
 import Head from "next/head";
+import BrandLogoSection from "@/components/brandlogo/BrandLogoSection";
+import ModalForm from "@/components/shared/ModalForm";
 
 export default function UseCases({ params: { lang } }: { params: { lang: string } }) {
     const dict = getDictionary(lang).useCases;
@@ -25,9 +27,10 @@ export default function UseCases({ params: { lang } }: { params: { lang: string 
                 ]}
             />
 
-            <section className="pt-20 pb-10 pt-lg-30 pb-lg-15">
+            <section className="pt-10 pb-10 pt-lg-20 pb-lg-15">
                 <div className="container">
-                    <div className="row justify-center mb-18">
+                    <BrandLogoSection />
+                    <div className="row justify-center mt-lg-20 mt-10 mb-18">
                         <div className="col-lg-9">
                             <div className="text-center">
                                 <Reveal el="p" delay={0.05} className="text-primary-dark">
@@ -48,6 +51,8 @@ export default function UseCases({ params: { lang } }: { params: { lang: string 
             <FaqSection />
 
             <CtaHome lang={lang} />
+
+            <ModalForm lang={lang} />
         </main>
     );
 }

@@ -7,6 +7,7 @@ import Breadcrumb from "@/components/shared/Breadcrumb";
 import TeamSection from "@/components/team/TeamSection";
 import { Metadata, ResolvingMetadata } from "next";
 import { getDictionary } from "../../dictionaries";
+import ModalForm from "@/components/shared/ModalForm";
 
 export default function AboutPage({ params: { lang } }: { params: { lang: string } }) {
     const dict = getDictionary(lang);
@@ -36,6 +37,8 @@ export default function AboutPage({ params: { lang } }: { params: { lang: string
             {/* <BrandLogoSection2 /> */}
 
             <CtaHome lang={lang} />
+
+            <ModalForm lang={lang} />
         </main>
     );
 }
