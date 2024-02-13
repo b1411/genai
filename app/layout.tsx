@@ -46,11 +46,16 @@ export async function generateMetadata(
     { params: { lang } }: { params: { lang: string } },
     parent: ResolvingMetadata,
 ): Promise<Metadata> {
+    let description =
+        "Интеграция AI-сотрудников для оптимизации бизнес-процессов. Максимальная эффективность и инновационные решения от QAZ-AI. Улучшите работу вашей компании с нами!";
+    if (lang === "en") {
+        description =
+            "Integration of AI employees to optimize business processes. Maximum efficiency and innovative solutions from QAZ-AI. Improve your company's work with us!";
+    }
     return {
         openGraph: {
             title: "QAZ.AI - интеграция AI-сотрудников для оптимизации бизнес-процессов",
-            description:
-                "Интеграция AI-сотрудников для оптимизации бизнес-процессов. Максимальная эффективность и инновационные решения от QAZ-AI. Улучшите работу вашей компании с нами!",
+            description: description,
             type: "website",
             locale: lang,
             url: "https://qaz-ai.com",
