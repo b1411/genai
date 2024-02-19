@@ -5,17 +5,29 @@ import { getDictionary } from "../../app/[lang]/dictionaries";
 import { useForm } from "react-hook-form";
 import { Modal } from "react-responsive-modal";
 import { onSubmit } from "@/api/sendForm";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function ModalForm({ lang }) {
     const dict = getDictionary(lang).modalForm;
+    const pathname = usePathname();
+    const { isOpen, onCloseModal, onOpenModal } = useAppContext();
+
+    useEffect(() => {
+        const isModalOpened = !!sessionStorage.getItem("isModalOpened");
+        if ((pathname === "/en" || pathname === "/ru") && !isModalOpened) {
+            setTimeout(() => {
+                onOpenModal();
+                sessionStorage.setItem("isModalOpened", true);
+            }, 1000);
+        }
+    }, [onOpenModal, pathname]);
 
     const {
         register,
         handleSubmit,
         formState: { errors },
     } = useForm();
-
-    const { isOpen, onCloseModal } = useAppContext();
 
     return (
         <Modal
