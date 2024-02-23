@@ -9,6 +9,7 @@ import Link from "next/link";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GoogleAnalytics } from "@/utils/gtag";
 import { getDictionary } from "./[lang]/dictionaries";
+import FbPixel from "@/utils/fbpixel";
 
 type TRootLayoutProps = {
     children: React.ReactNode;
@@ -23,6 +24,7 @@ export default function RootLayout({ children, params: { lang } }: TRootLayoutPr
             <head>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <GoogleAnalytics />
+                <FbPixel />
             </head>
             <body>
                 <RootClientLayout>
