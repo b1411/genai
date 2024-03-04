@@ -30,7 +30,7 @@ export const en = {
     footer: {
         description:
             "Contact us today and find out how QAZ.AI can be your trusted partner in the world of artificial intelligence. Together we will create the future of your business.",
-        copyright: "All rights reserved",
+        copyright: "LLC",
         distribution: "News & updates",
         useCaseLinks: "Use\nCases",
     },

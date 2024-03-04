@@ -192,8 +192,7 @@ export default function Footer({ lang }: { lang: string }) {
 
                 <div className="text-center py-6 mt-8">
                     <p className="fs-sm mb-0">
-                        © 2023 <span className="text-primary-dark">QAZ.AI</span>{" "}
-                        {dict.copyright}
+                        © 2024 {dict.copyright} &#34;Tanir technology&#34;
                     </p>
                 </div>
             </div>
