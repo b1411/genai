@@ -120,7 +120,7 @@ export default function Herosection() {
                                     >
                                         {dict.chatTitle}
                                     </h2>
-                                    <div className="chat-container">
+                                    {/* <div className="chat-container">
                                         <iframe
                                             src="https://www.chatbase.co/chatbot-iframe/r0xH9AtFi_YHI-uARhnG-"
                                             width="100%"
@@ -130,7 +130,7 @@ export default function Herosection() {
                                             }}
                                             frameBorder="0"
                                         ></iframe>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </Reveal>
                             <ul className="d-flex flex-wrap gap-4 gap-md-8 gap-lg-10 align-center justify-center mt-8 mb-0">
