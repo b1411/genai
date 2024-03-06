@@ -56,7 +56,7 @@ export default function Herosection() {
 
         (async function () {
             try {
-                let res = await fetch("http://[::1]:8349/qazai", {
+                let res = await fetch("https://jasik.alwaysdata.net/qazai", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
