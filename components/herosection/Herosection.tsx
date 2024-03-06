@@ -56,7 +56,7 @@ export default function Herosection() {
 
         (async function () {
             try {
-                let res = await fetch("http://[::1]:8349/webhook", {
+                let res = await fetch("http://[::1]:8349/qazai", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
