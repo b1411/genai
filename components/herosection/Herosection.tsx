@@ -16,56 +16,16 @@ import { faPaperPlane } from "@fortawesome/free-regular-svg-icons";
 import { TChatbaseData } from "@/types/chatbase";
 import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
 import { useAppContext } from "@/context/appContext";
+// import {
+//     MainContainer,
+//     ChatContainer,
+//     MessageList,
+//     Message,
+//     MessageInput,
+// } from "@chatscope/chat-ui-kit-react";
 
 export default function Herosection() {
-    // let data: TChatbaseData = {
-    //     messages: [],
-    //     chatbotId: `${process.env.NEXT_PUBLIC_CHATBOT_ID}`,
-    //     stream: false,
-    //     temperature: 0.3,
-    //     conversationId: ,
-    // };
-    // data.conversationId = `${Date.now()}`;
-    // function sendMessage(e: SyntheticEvent) {
-    //     function addMessage(text: string, direction: string) {
-    //         const message = document.createElement("div");
-    //         message.className = `chat-message ${direction}`;
-    //         message.innerHTML = text;
-    //         if (messagesList.current) {
-    //             messagesList.current.appendChild(message);
-    //             messagesList.current.scrollTo(0, messagesList.current.scrollHeight);
-    //         }
-    //     }
-
-    //     e.preventDefault();
-    //     setChatMessage("");
-
-    //     addMessage(chatMessage, "sender");
-
-    //     setIsWaitingForReply(true);
-
-    //     let message = {
-    //         content: chatMessage,
-    //         role: "user",
-    //     };
-    //     data.messages.push(message);
-
-    //     fetch("https://www.chatbase.co/api/v1/chat", {
-    //         method: "post",
-    //         headers: {
-    //             "Content-Type": "application/json",
-    //             Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_KEY}`,
-    //         },
-    //         body: JSON.stringify(data),
-    //     })
-    //         .then((res) => res.json())
-    //         .then((res) => {
-    //             let reply = { content: res["text"], role: "assistant" };
-    //             data.messages.push();
-    //             addMessage(res["text"], "receiver");
-    //             setIsWaitingForReply(false);
-    //         });
-    // }
+    let contactId = crypto.randomUUID();
 
     const router = usePathname();
     const messagesList = useRef<HTMLDivElement>(null);
@@ -75,6 +35,45 @@ export default function Herosection() {
     let dict = getDictionary(lang).home.herosection;
 
     const { onOpenModal } = useAppContext();
+
+    function sendMessage(e: SyntheticEvent) {
+        function addMessage(text: string, direction: string) {
+            const message = document.createElement("div");
+            message.className = `chat-message ${direction}`;
+            message.innerHTML = text;
+            if (messagesList.current) {
+                messagesList.current.appendChild(message);
+                messagesList.current.scrollTo(0, messagesList.current.scrollHeight);
+            }
+        }
+
+        e.preventDefault();
+        setChatMessage("");
+
+        addMessage(chatMessage, "sender");
+
+        setIsWaitingForReply(true);
+
+        (async function () {
+            try {
+                let res = await fetch("http://[::1]:8349/webhook", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        contactId: contactId,
+                        message: chatMessage,
+                    }),
+                });
+                setIsWaitingForReply(false);
+                addMessage((await res.json()).message, "receiver");
+            } catch {
+                setIsWaitingForReply(false);
+                addMessage("Ошибка", "receiver");
+            }
+        })();
+    }
 
     return (
         <section
@@ -105,32 +104,37 @@ export default function Herosection() {
                                 </Reveal>
                             </div>
                             <Reveal delay={0.45}>
-                                <div
-                                    style={{
-                                        width: "100%",
-                                        height: "100%",
-                                        marginTop: "50px",
-                                    }}
-                                >
-                                    <h2
-                                        style={{
-                                            marginBottom: "40px",
-                                            marginTop: "60px",
-                                        }}
-                                    >
-                                        {dict.chatTitle}
-                                    </h2>
-                                    {/* <div className="chat-container">
-                                        <iframe
-                                            src="https://www.chatbase.co/chatbot-iframe/r0xH9AtFi_YHI-uARhnG-"
-                                            width="100%"
-                                            style={{
-                                                height: "100%",
-                                                minHeight: "100%",
-                                            }}
-                                            frameBorder="0"
-                                        ></iframe>
-                                    </div> */}
+                                <div className="chat-container mt-8">
+                                    <div className="chat-messages" ref={messagesList}></div>
+                                    <div className="chat-input">
+                                        <form
+                                            className="input-group"
+                                            onSubmit={(e) => sendMessage(e)}
+                                        >
+                                            <div className="form-input">
+                                                <input
+                                                    type="text"
+                                                    placeholder="Введите ваше сообщение..."
+                                                    required
+                                                    min={10}
+                                                    value={chatMessage}
+                                                    onChange={(e) => setChatMessage(e.target.value)}
+                                                />
+                                                {!isWaitingForReply ? (
+                                                    <button type="submit">
+                                                        <FontAwesomeIcon icon={faPaperPlane} />
+                                                    </button>
+                                                ) : (
+                                                    <button type="submit" disabled>
+                                                        <FontAwesomeIcon
+                                                            icon={faCircleNotch}
+                                                            className="animate-spinnner"
+                                                        />
+                                                    </button>
+                                                )}
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
                             </Reveal>
                             <ul className="d-flex flex-wrap gap-4 gap-md-8 gap-lg-10 align-center justify-center mt-8 mb-0">
