@@ -128,7 +128,7 @@ export default function Herosection() {
                                                     <button type="submit" disabled>
                                                         <FontAwesomeIcon
                                                             icon={faCircleNotch}
-                                                            className="animate-spinnner"
+                                                            className="fa-spin"
                                                         />
                                                     </button>
                                                 )}
