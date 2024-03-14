@@ -15,7 +15,7 @@ export default function BrandLogoSection() {
         arrows: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 5,
+        slidesToShow: 4,
         slidestoScroll: 5,
         autoplay: true,
         accessability: false,
@@ -49,7 +49,7 @@ export default function BrandLogoSection() {
             <Reveal delay={0.05}>
                 <div className="container">
                     <Slider {...settings}>
-                        {indices.map((el, index) => {
+                        {indices.sort(() => (Math.random() > .5) ? 1 : -1).map((el, index) => {
                             return (
                                 <div
                                     key={index}

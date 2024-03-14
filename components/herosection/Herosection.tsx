@@ -16,13 +16,6 @@ import { faPaperPlane } from "@fortawesome/free-regular-svg-icons";
 import { TChatbaseData } from "@/types/chatbase";
 import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
 import { useAppContext } from "@/context/appContext";
-// import {
-//     MainContainer,
-//     ChatContainer,
-//     MessageList,
-//     Message,
-//     MessageInput,
-// } from "@chatscope/chat-ui-kit-react";
 
 export default function Herosection() {
     let contactId = crypto.randomUUID();
